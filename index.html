@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Costa Capital — Real Estate Finance & Capital Solutions Spain</title>
+
+<!-- ── PRIMARY SEO ─────────────────────────────────────────── -->
+<title>Costa Capital — Real Estate Finance Spain | Developer Loans & Bridge Financing</title>
+<meta name="description" content="Costa Capital structures real estate finance for developers and investors in Spain. Bridge loans, developer finance, mezzanine. Costa del Sol, Costa Blanca, Valencia, Ibiza. Indicative terms within 48 hours.">
+<meta name="keywords" content="real estate finance Spain, developer finance Spain, bridge loan Spain, mezzanine finance Spain, vastgoedfinanciering Spanje, financiación inmobiliaria España, Costa del Sol, Costa Blanca, Valencia, Ibiza, LTV Spain">
+<meta name="author" content="Costa Capital">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://costacapital.pro/">
+
+<!-- ── HREFLANG — tells Google which language each URL serves ─ -->
+<link rel="alternate" hreflang="en" href="https://costacapital.pro/">
+<link rel="alternate" hreflang="nl" href="https://costacapital.pro/">
+<link rel="alternate" hreflang="es" href="https://costacapital.pro/">
+<link rel="alternate" hreflang="x-default" href="https://costacapital.pro/">
+
+<!-- ── OPEN GRAPH (LinkedIn, WhatsApp previews) ───────────────── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://costacapital.pro/">
+<meta property="og:title" content="Costa Capital — Real Estate Finance Spain">
+<meta property="og:description" content="Bridge loans, developer finance and mezzanine for real estate projects in Spain. Costa del Sol, Costa Blanca, Valencia, Ibiza. Indicative terms within 48 hours.">
+<meta property="og:image" content="https://costacapital.pro/og-image.jpg">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:site_name" content="Costa Capital">
+
+<!-- ── TWITTER CARD ──────────────────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Costa Capital — Real Estate Finance Spain">
+<meta name="twitter:description" content="Bridge loans, developer finance and mezzanine for real estate projects in Spain. Indicative terms within 48 hours.">
+
+<!-- ── SCHEMA.ORG — structured data for Google ───────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Costa Capital",
+  "alternateName": "Costa Capital Real Estate Finance",
+  "description": "Real estate finance and capital solutions for developers and investors in Spain. Bridge loans, developer finance, mezzanine finance. Primarily focused on Costa del Sol, Costa Blanca, Valencia and Ibiza.",
+  "url": "https://costacapital.pro",
+  "email": "info@costacapital.pro",
+  "areaServed": [
+    {"@type": "Country", "name": "Spain"},
+    {"@type": "Place", "name": "Costa del Sol"},
+    {"@type": "Place", "name": "Costa Blanca"},
+    {"@type": "Place", "name": "Valencia"},
+    {"@type": "Place", "name": "Ibiza"}
+  ],
+  "serviceType": [
+    "Bridge Loans",
+    "Developer Finance",
+    "Mezzanine Finance",
+    "Real Estate Finance",
+    "Distressed Asset Finance"
+  ],
+  "priceRange": "€350,000 — €50,000,000+",
+  "currenciesAccepted": "EUR",
+  "inLanguage": ["en", "nl", "es"],
+  "sameAs": [
+    "https://www.linkedin.com/company/costacapital"
+  ]
+}
+</script>
+
+<!-- ── FONTS ──────────────────────────────────────────────────── -->
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -214,6 +280,16 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 </style>
 </head>
 <body>
+
+<!-- SEO TEXT — visible to Google, hidden visually -->
+<div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;" aria-hidden="true">
+  <h1>Costa Capital — Real Estate Finance Spain</h1>
+  <p>Costa Capital provides real estate finance and capital solutions for developers and investors in Spain. We specialise in bridge loans, developer finance, mezzanine finance and distressed asset financing. Our primary focus is on the Spanish Mediterranean coast including Costa del Sol, Costa Blanca, Valencia and Ibiza. We provide indicative financing terms within 48 hours. Minimum ticket €350,000. Maximum €50M+. Download our free Real Estate Finance Guide Spain.</p>
+  <p>Services: Developer Finance Spain, Bridge Loans Spain, Mezzanine Finance Spain, Flip Finance Spain, Distressed Assets Spain, Deal Flow Spain.</p>
+  <p>Locations: Marbella, Estepona, Costa del Sol, Dénia, Jávea, Moraira, Alicante, Costa Blanca, Valencia, Ibiza, Balearics.</p>
+</div>
+
+
 
 <!-- NAV -->
 <nav>
@@ -631,6 +707,7 @@ function setLang(lang){
   const s=document.getElementById('select-deal-type');if(s){s.options[0].text=t.selDef;t.opts.forEach((txt,i)=>{if(s.options[i+1])s.options[i+1].text=txt;});}
   const c=document.getElementById('select-capital');if(c&&c.options[0])c.options[0].text=t.capDef;
   updateGuideRoleOptions(lang);
+  updateAria(lang);
 }
 
 // ── SCROLL REVEAL ─────────────────────────────────────────────
@@ -684,8 +761,21 @@ function updateGuideRoleOptions(lang){
   ids.forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=labels[i];});
 }
 
+// ── ARIA ─────────────────────────────────────────────────────
+// ── ARIA HIDDEN for non-active languages (SEO + accessibility) ──
+function updateAria(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    if (el.getAttribute('data-lang') !== lang) {
+      el.setAttribute('aria-hidden', 'true');
+    } else {
+      el.removeAttribute('aria-hidden');
+    }
+  });
+}
+
 // ── INIT ──────────────────────────────────────────────────────
 setLang('en');
+updateAria('en');
 </script>
 </body>
 </html>
