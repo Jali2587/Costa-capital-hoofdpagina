@@ -19,7 +19,6 @@ html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:var(--font-b);font-weight:300;line-height:1.7;overflow-x:hidden;}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4;}
 
-/* LANGUAGE — EN visible by default, JS takes over on interaction */
 [data-lang="nl"],[data-lang="es"]{display:none;}
 [data-lang="en"]{display:block;}
 span[data-lang="en"]{display:inline;}
@@ -29,7 +28,6 @@ span[data-lang="nl"],span[data-lang="es"]{display:none;}
 span[data-lang].active{display:inline;}
 span[data-lang]:not(.active){display:none;}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,0.94);border-bottom:1px solid var(--border);backdrop-filter:blur(14px);}
 .logo{font-family:var(--font-d);font-size:1.5rem;font-weight:400;letter-spacing:0.08em;color:var(--gold-light);text-decoration:none;}
 .logo span{color:var(--muted);font-weight:300;}
@@ -43,7 +41,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem 4rem;display:
 .nav-cta{background:var(--gold);color:var(--black)!important;padding:0.55rem 1.4rem!important;font-weight:500!important;letter-spacing:0.1em!important;transition:background 0.3s!important;}
 .nav-cta:hover{background:var(--gold-light)!important;}
 
-/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 4rem 6rem;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(200,169,110,0.06) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(200,169,110,0.04) 0%,transparent 50%),linear-gradient(160deg,#0d0d0d 0%,#080808 100%);}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,169,110,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,169,110,0.04) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.3) 40%,rgba(0,0,0,0.3) 70%,transparent 100%);}
@@ -58,20 +55,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem 4rem;display:
 .stat-num{font-family:var(--font-d);font-size:2.8rem;font-weight:300;color:var(--gold-light);line-height:1;}
 .stat-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem;}
 
-/* BUTTONS */
 .btn-primary{background:var(--gold);color:var(--black);padding:0.9rem 2.2rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;border:none;cursor:pointer;transition:background 0.3s,transform 0.2s;}
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-1px);}
 .btn-ghost{color:var(--muted);padding:0.9rem 2rem;font-size:0.82rem;font-family:var(--font-b);letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border);background:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;transition:color 0.3s,border-color 0.3s;}
 .btn-ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.2);}
 
-/* SECTIONS */
 section{padding:7rem 4rem;}
 .section-label{font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
 .section-label::before{content:'';width:30px;height:1px;background:var(--gold);}
 h2{font-family:var(--font-d);font-size:clamp(2.2rem,4vw,3.8rem);font-weight:300;line-height:1.1;letter-spacing:-0.01em;}
 h2 em{font-style:italic;color:var(--gold-light);}
 
-/* SERVICES */
 .services{background:var(--deep);border-top:1px solid var(--border);}
 .services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;align-items:end;}
 .services-intro{color:var(--muted);font-size:1rem;}
@@ -86,7 +80,6 @@ h2 em{font-style:italic;color:var(--gold-light);}
 .service-desc{font-size:0.85rem;color:var(--muted);line-height:1.8;}
 .service-tag{display:inline-block;margin-top:1.5rem;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:0.3rem 0.7rem;}
 
-/* DEAL FORM */
 .deal-section{background:var(--black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .deal-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;align-items:start;}
 .deal-info h2{margin-bottom:1.5rem;}
@@ -110,13 +103,11 @@ textarea{resize:vertical;min-height:100px;}
 .form-submit{width:100%;background:var(--gold);color:var(--black);border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;transition:background 0.3s,transform 0.2s;}
 .form-submit:hover{background:var(--gold-light);transform:translateY(-1px);}
 
-/* DIRECT EMAIL SECTION */
 .direct-email-section{background:var(--deep);border-top:1px solid var(--border);padding:5rem 4rem;text-align:center;}
 .direct-email-inner{max-width:620px;margin:0 auto;}
 .direct-email-inner h2{margin-bottom:1rem;}
 .direct-email-inner p{color:var(--muted);font-size:0.95rem;margin-bottom:2.5rem;line-height:1.8;}
 
-/* AI TOOL SECTION */
 .tool-section{background:var(--black);border-top:1px solid var(--border);text-align:center;padding:7rem 4rem;position:relative;overflow:hidden;}
 .tool-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(200,169,110,0.06) 0%,transparent 70%);pointer-events:none;}
 .tool-inner{position:relative;max-width:700px;margin:0 auto;}
@@ -124,7 +115,6 @@ textarea{resize:vertical;min-height:100px;}
 .tool-section h2{margin-bottom:1.5rem;}
 .tool-section p{color:var(--muted);font-size:1rem;margin-bottom:3rem;max-width:500px;margin-left:auto;margin-right:auto;}
 
-/* ABOUT */
 .about-section{background:var(--deep);border-top:1px solid var(--border);}
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
 .about-text p{color:var(--muted);font-size:0.95rem;margin-top:1.5rem;line-height:1.9;}
@@ -135,7 +125,6 @@ textarea{resize:vertical;min-height:100px;}
 .pillar h4{font-family:var(--font-d);font-size:1.1rem;font-weight:400;margin-bottom:0.5rem;}
 .pillar p{font-size:0.82rem;color:var(--muted);line-height:1.7;}
 
-/* FOOTER */
 footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;align-items:start;}
 .footer-logo{font-family:var(--font-d);font-size:1.6rem;font-weight:400;color:var(--gold-light);margin-bottom:1rem;}
 .footer-tagline{font-size:0.82rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.7;}
@@ -147,13 +136,11 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 .footer-bottom{border-top:1px solid var(--border);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;}
 .footer-bottom p{font-size:0.75rem;color:var(--muted);letter-spacing:0.05em;}
 
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeLeft{from{opacity:0;transform:translateX(24px);}to{opacity:1;transform:translateX(0);}}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   nav{padding:1.2rem 2rem;}
   .hero{padding:0 2rem 5rem;}
@@ -294,75 +281,27 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
   <div class="services-grid">
     <div class="service-card reveal">
       <div class="service-num">01</div>
-      <div class="service-title">
-        <span data-lang="en">Developer Finance</span>
-        <span data-lang="nl">Ontwikkelaarsfinanciering</span>
-        <span data-lang="es">Financiación para Promotores</span>
-      </div>
-      <p class="service-desc">
-        <span data-lang="en">Senior and mezzanine debt for residential, commercial and mixed-use development projects. Tailored to your timeline and exit strategy.</span>
-        <span data-lang="nl">Senior en mezzanine financiering voor residentiële, commerciële en gemengde ontwikkelprojecten. Afgestemd op uw tijdlijn en exitstrategie.</span>
-        <span data-lang="es">Deuda senior y mezzanine para proyectos de promoción residencial, comercial y mixta. Adaptada a tus plazos y estrategia de salida.</span>
-      </p>
-      <span class="service-tag">
-        <span data-lang="en">Development Loans</span>
-        <span data-lang="nl">Ontwikkelingsleningen</span>
-        <span data-lang="es">Préstamos Promotores</span>
-      </span>
+      <div class="service-title"><span data-lang="en">Developer Finance</span><span data-lang="nl">Ontwikkelaarsfinanciering</span><span data-lang="es">Financiación para Promotores</span></div>
+      <p class="service-desc"><span data-lang="en">Senior and mezzanine debt for residential, commercial and mixed-use development projects. Tailored to your timeline and exit strategy.</span><span data-lang="nl">Senior en mezzanine financiering voor residentiële, commerciële en gemengde ontwikkelprojecten. Afgestemd op uw tijdlijn en exitstrategie.</span><span data-lang="es">Deuda senior y mezzanine para proyectos de promoción residencial, comercial y mixta. Adaptada a tus plazos y estrategia de salida.</span></p>
+      <span class="service-tag"><span data-lang="en">Development Loans</span><span data-lang="nl">Ontwikkelingsleningen</span><span data-lang="es">Préstamos Promotores</span></span>
     </div>
     <div class="service-card reveal">
       <div class="service-num">02</div>
-      <div class="service-title">
-        <span data-lang="en">Flip Finance</span>
-        <span data-lang="nl">Flip Financiering</span>
-        <span data-lang="es">Financiación para Flips</span>
-      </div>
-      <p class="service-desc">
-        <span data-lang="en">Short-term bridging and refurbishment loans for buy-renovate-sell strategies. Fast execution, flexible terms, no unnecessary conditions.</span>
-        <span data-lang="nl">Kortlopende overbruggings- en renovatieleningen voor aankoop-renovatie-verkoop strategieën. Snelle uitvoering, flexibele voorwaarden.</span>
-        <span data-lang="es">Préstamos puente y de rehabilitación a corto plazo para estrategias de compra-reforma-venta. Ejecución rápida, condiciones flexibles.</span>
-      </p>
-      <span class="service-tag">
-        <span data-lang="en">Bridge &amp; Refurb</span>
-        <span data-lang="nl">Overbrugging &amp; Renovatie</span>
-        <span data-lang="es">Puente &amp; Rehabilitación</span>
-      </span>
+      <div class="service-title"><span data-lang="en">Flip Finance</span><span data-lang="nl">Flip Financiering</span><span data-lang="es">Financiación para Flips</span></div>
+      <p class="service-desc"><span data-lang="en">Short-term bridging and refurbishment loans for buy-renovate-sell strategies. Fast execution, flexible terms, no unnecessary conditions.</span><span data-lang="nl">Kortlopende overbruggings- en renovatieleningen voor aankoop-renovatie-verkoop strategieën. Snelle uitvoering, flexibele voorwaarden.</span><span data-lang="es">Préstamos puente y de rehabilitación a corto plazo para estrategias de compra-reforma-venta. Ejecución rápida, condiciones flexibles.</span></p>
+      <span class="service-tag"><span data-lang="en">Bridge &amp; Refurb</span><span data-lang="nl">Overbrugging &amp; Renovatie</span><span data-lang="es">Puente &amp; Rehabilitación</span></span>
     </div>
     <div class="service-card reveal">
       <div class="service-num">03</div>
-      <div class="service-title">
-        <span data-lang="en">Distressed Assets</span>
-        <span data-lang="nl">Distressed Vastgoed</span>
-        <span data-lang="es">Activos en Dificultad</span>
-      </div>
-      <p class="service-desc">
-        <span data-lang="en">We acquire, structure and reposition distressed real estate. If you have a non-performing asset or an urgent exit need, bring it to us.</span>
-        <span data-lang="nl">Wij kopen, structureren en herpositioneren noodlijdend vastgoed. Als u een non-performing asset heeft of snel wilt verkopen, neem contact op.</span>
-        <span data-lang="es">Adquirimos, estructuramos y reposicionamos activos inmobiliarios en dificultad. Si tienes un activo no rentable o necesitas una salida urgente, cuéntanoslo.</span>
-      </p>
-      <span class="service-tag">
-        <span data-lang="en">NPL &amp; Workouts</span>
-        <span data-lang="nl">NPL &amp; Herstructurering</span>
-        <span data-lang="es">NPL &amp; Reestructuración</span>
-      </span>
+      <div class="service-title"><span data-lang="en">Distressed Assets</span><span data-lang="nl">Distressed Vastgoed</span><span data-lang="es">Activos en Dificultad</span></div>
+      <p class="service-desc"><span data-lang="en">We acquire, structure and reposition distressed real estate. If you have a non-performing asset or an urgent exit need, bring it to us.</span><span data-lang="nl">Wij kopen, structureren en herpositioneren noodlijdend vastgoed. Als u een non-performing asset heeft of snel wilt verkopen, neem contact op.</span><span data-lang="es">Adquirimos, estructuramos y reposicionamos activos inmobiliarios en dificultad. Si tienes un activo no rentable o necesitas una salida urgente, cuéntanoslo.</span></p>
+      <span class="service-tag"><span data-lang="en">NPL &amp; Workouts</span><span data-lang="nl">NPL &amp; Herstructurering</span><span data-lang="es">NPL &amp; Reestructuración</span></span>
     </div>
     <div class="service-card reveal">
       <div class="service-num">04</div>
-      <div class="service-title">
-        <span data-lang="en">Deal Flow &amp; Co-Investment</span>
-        <span data-lang="nl">Dealflow &amp; Co-Investering</span>
-        <span data-lang="es">Flujo de Operaciones &amp; Co-Inversión</span>
-      </div>
-      <p class="service-desc">
-        <span data-lang="en">We take positions alongside developers and pass on curated real estate opportunities. Access our network for off-market deal flow.</span>
-        <span data-lang="nl">Wij nemen posities in naast ontwikkelaars en zetten gecureerde vastgoedkansen door. Toegang tot ons netwerk voor off-market dealflow.</span>
-        <span data-lang="es">Tomamos posiciones junto a promotores y distribuimos oportunidades inmobiliarias seleccionadas. Accede a nuestra red de operaciones fuera de mercado.</span>
-      </p>
-      <span class="service-tag">
-        <span data-lang="en">Off-Market</span>
-        <span data-lang="nl">Off-Market</span>
-        <span data-lang="es">Fuera de Mercado</span>
-      </span>
+      <div class="service-title"><span data-lang="en">Deal Flow &amp; Co-Investment</span><span data-lang="nl">Dealflow &amp; Co-Investering</span><span data-lang="es">Flujo de Operaciones &amp; Co-Inversión</span></div>
+      <p class="service-desc"><span data-lang="en">We take positions alongside developers and pass on curated real estate opportunities. Access our network for off-market deal flow.</span><span data-lang="nl">Wij nemen posities in naast ontwikkelaars en zetten gecureerde vastgoedkansen door. Toegang tot ons netwerk voor off-market dealflow.</span><span data-lang="es">Tomamos posiciones junto a promotores y distribuimos oportunidades inmobiliarias seleccionadas. Accede a nuestra red de operaciones fuera de mercado.</span></p>
+      <span class="service-tag"><span data-lang="en">Off-Market</span><span data-lang="nl">Off-Market</span><span data-lang="es">Fuera de Mercado</span></span>
     </div>
   </div>
 </section>
@@ -371,127 +310,33 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 <section class="deal-section" id="deal">
   <div class="deal-inner">
     <div class="deal-info reveal">
-      <p class="section-label">
-        <span data-lang="en">Submit a Deal</span>
-        <span data-lang="nl">Deal Indienen</span>
-        <span data-lang="es">Enviar Operación</span>
-      </p>
-      <h2>
-        <span data-lang="en">Tell us about<br>your <em>opportunity.</em></span>
-        <span data-lang="nl">Vertel ons over<br>uw <em>kans.</em></span>
-        <span data-lang="es">Cuéntanos sobre<br>tu <em>oportunidad.</em></span>
-      </h2>
-      <p>
-        <span data-lang="en">We review every submission within 48 hours. No long intake forms — just the essentials.</span>
-        <span data-lang="nl">Wij beoordelen elke aanvraag binnen 48 uur. Geen lange formulieren — alleen de essenties.</span>
-        <span data-lang="es">Revisamos cada envío en 48 horas. Sin formularios interminables — solo lo esencial.</span>
-      </p>
+      <p class="section-label"><span data-lang="en">Submit a Deal</span><span data-lang="nl">Deal Indienen</span><span data-lang="es">Enviar Operación</span></p>
+      <h2><span data-lang="en">Tell us about<br>your <em>opportunity.</em></span><span data-lang="nl">Vertel ons over<br>uw <em>kans.</em></span><span data-lang="es">Cuéntanos sobre<br>tu <em>oportunidad.</em></span></h2>
+      <p><span data-lang="en">We review every submission within 48 hours. No long intake forms — just the essentials.</span><span data-lang="nl">Wij beoordelen elke aanvraag binnen 48 uur. Geen lange formulieren — alleen de essenties.</span><span data-lang="es">Revisamos cada envío en 48 horas. Sin formularios interminables — solo lo esencial.</span></p>
       <div class="deal-steps">
-        <div class="deal-step">
-          <span class="step-num">01</span>
-          <p class="step-text">
-            <span data-lang="en"><strong>Submit your deal</strong> — asset type, location, capital required and your timeline.</span>
-            <span data-lang="nl"><strong>Dien uw deal in</strong> — type asset, locatie, benodigde financiering en uw tijdlijn.</span>
-            <span data-lang="es"><strong>Envía tu operación</strong> — tipo de activo, ubicación, capital necesario y plazo.</span>
-          </p>
-        </div>
-        <div class="deal-step">
-          <span class="step-num">02</span>
-          <p class="step-text">
-            <span data-lang="en"><strong>We respond within 48 hours</strong> with a first indication or targeted questions.</span>
-            <span data-lang="nl"><strong>Wij reageren binnen 48 uur</strong> met een eerste indicatie of gerichte vragen.</span>
-            <span data-lang="es"><strong>Respondemos en 48 horas</strong> con una primera indicación o preguntas concretas.</span>
-          </p>
-        </div>
-        <div class="deal-step">
-          <span class="step-num">03</span>
-          <p class="step-text">
-            <span data-lang="en"><strong>Term sheet &amp; close</strong> — we move fast when the opportunity is right.</span>
-            <span data-lang="nl"><strong>Term sheet &amp; afsluiting</strong> — wij handelen snel als de kans er is.</span>
-            <span data-lang="es"><strong>Term sheet y cierre</strong> — actuamos rápido cuando la oportunidad es la correcta.</span>
-          </p>
-        </div>
+        <div class="deal-step"><span class="step-num">01</span><p class="step-text"><span data-lang="en"><strong>Submit your deal</strong> — asset type, location, capital required and your timeline.</span><span data-lang="nl"><strong>Dien uw deal in</strong> — type asset, locatie, benodigde financiering en uw tijdlijn.</span><span data-lang="es"><strong>Envía tu operación</strong> — tipo de activo, ubicación, capital necesario y plazo.</span></p></div>
+        <div class="deal-step"><span class="step-num">02</span><p class="step-text"><span data-lang="en"><strong>We respond within 48 hours</strong> with a first indication or targeted questions.</span><span data-lang="nl"><strong>Wij reageren binnen 48 uur</strong> met een eerste indicatie of gerichte vragen.</span><span data-lang="es"><strong>Respondemos en 48 horas</strong> con una primera indicación o preguntas concretas.</span></p></div>
+        <div class="deal-step"><span class="step-num">03</span><p class="step-text"><span data-lang="en"><strong>Term sheet &amp; close</strong> — we move fast when the opportunity is right.</span><span data-lang="nl"><strong>Term sheet &amp; afsluiting</strong> — wij handelen snel als de kans er is.</span><span data-lang="es"><strong>Term sheet y cierre</strong> — actuamos rápido cuando la oportunidad es la correcta.</span></p></div>
       </div>
     </div>
     <div class="deal-form reveal">
-      <div class="form-title">
-        <span data-lang="en">Deal Submission</span>
-        <span data-lang="nl">Deal Aanmelding</span>
-        <span data-lang="es">Envío de Operación</span>
-      </div>
-      <p class="form-sub">
-        <span data-lang="en">All submissions are treated with strict confidentiality.</span>
-        <span data-lang="nl">Alle aanmeldingen worden strikt vertrouwelijk behandeld.</span>
-        <span data-lang="es">Todas las solicitudes se tratan con estricta confidencialidad.</span>
-      </p>
-      <p class="form-sub" style="margin-top:-1rem;margin-bottom:2rem;">
-        <span data-lang="en">Or email directly: <a href="mailto:info@costacapital.pro" style="color:var(--gold);text-decoration:none;">info@costacapital.pro</a></span>
-        <span data-lang="nl">Of stuur direct een e-mail: <a href="mailto:info@costacapital.pro" style="color:var(--gold);text-decoration:none;">info@costacapital.pro</a></span>
-        <span data-lang="es">O envíe directamente a: <a href="mailto:info@costacapital.pro" style="color:var(--gold);text-decoration:none;">info@costacapital.pro</a></span>
-      </p>
+      <div class="form-title"><span data-lang="en">Deal Submission</span><span data-lang="nl">Deal Aanmelding</span><span data-lang="es">Envío de Operación</span></div>
+      <p class="form-sub"><span data-lang="en">All submissions are treated with strict confidentiality.</span><span data-lang="nl">Alle aanmeldingen worden strikt vertrouwelijk behandeld.</span><span data-lang="es">Todas las solicitudes se tratan con estricta confidencialidad.</span></p>
+      <p class="form-sub" style="margin-top:-1rem;margin-bottom:2rem;"><span data-lang="en">Or email directly: <a href="mailto:info@costacapital.pro" style="color:var(--gold);text-decoration:none;">info@costacapital.pro</a></span><span data-lang="nl">Of stuur direct een e-mail: <a href="mailto:info@costacapital.pro" style="color:var(--gold);text-decoration:none;">info@costacapital.pro</a></span><span data-lang="es">O envíe directamente a: <a href="mailto:info@costacapital.pro" style="color:var(--gold);text-decoration:none;">info@costacapital.pro</a></span></p>
       <div class="form-row">
-        <div class="form-group">
-          <label data-lang="en">Name</label>
-          <label data-lang="nl">Naam</label>
-          <label data-lang="es">Nombre</label>
-          <input type="text" id="input-name" placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="your@email.com">
-        </div>
+        <div class="form-group"><label data-lang="en">Name</label><label data-lang="nl">Naam</label><label data-lang="es">Nombre</label><input type="text" id="input-name" placeholder="Your name"></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
       </div>
       <div class="form-row">
-        <div class="form-group">
-          <label data-lang="en">Phone</label>
-          <label data-lang="nl">Telefoon</label>
-          <label data-lang="es">Teléfono</label>
-          <input type="tel" id="input-phone" placeholder="+34 ...">
-        </div>
-        <div class="form-group">
-          <label data-lang="en">Deal Type</label>
-          <label data-lang="nl">Deal Type</label>
-          <label data-lang="es">Tipo de Operación</label>
-          <select id="select-deal-type">
-            <option value="" disabled selected>Select...</option>
-            <option value="dev">Developer Finance</option>
-            <option value="flip">Flip Finance</option>
-            <option value="distressed">Distressed Asset</option>
-            <option value="dealflow">Deal Flow / Co-Investment</option>
-          </select>
-        </div>
+        <div class="form-group"><label data-lang="en">Phone</label><label data-lang="nl">Telefoon</label><label data-lang="es">Teléfono</label><input type="tel" id="input-phone" placeholder="+34 ..."></div>
+        <div class="form-group"><label data-lang="en">Deal Type</label><label data-lang="nl">Deal Type</label><label data-lang="es">Tipo de Operación</label><select id="select-deal-type"><option value="" disabled selected>Select...</option><option value="dev">Developer Finance</option><option value="flip">Flip Finance</option><option value="distressed">Distressed Asset</option><option value="dealflow">Deal Flow / Co-Investment</option></select></div>
       </div>
       <div class="form-row">
-        <div class="form-group">
-          <label data-lang="en">Location</label>
-          <label data-lang="nl">Locatie</label>
-          <label data-lang="es">Ubicación</label>
-          <input type="text" id="input-location" placeholder="City / Region">
-        </div>
-        <div class="form-group">
-          <label data-lang="en">Capital Required (€)</label>
-          <label data-lang="nl">Benodigde Financiering (€)</label>
-          <label data-lang="es">Capital Necesario (€)</label>
-          <select id="select-capital">
-            <option value="" disabled selected>Select range...</option>
-            <option>€250K – €1M</option>
-            <option>€1M – €5M</option>
-            <option>€5M – €15M</option>
-            <option>€15M+</option>
-          </select>
-        </div>
+        <div class="form-group"><label data-lang="en">Location</label><label data-lang="nl">Locatie</label><label data-lang="es">Ubicación</label><input type="text" id="input-location" placeholder="City / Region"></div>
+        <div class="form-group"><label data-lang="en">Capital Required (€)</label><label data-lang="nl">Benodigde Financiering (€)</label><label data-lang="es">Capital Necesario (€)</label><select id="select-capital"><option value="" disabled selected>Select range...</option><option>€250K – €1M</option><option>€1M – €5M</option><option>€5M – €15M</option><option>€15M+</option></select></div>
       </div>
-      <div class="form-group">
-        <label data-lang="en">Brief Deal Description</label>
-        <label data-lang="nl">Korte Omschrijving</label>
-        <label data-lang="es">Descripción Breve</label>
-        <textarea id="input-desc" placeholder="Asset type, current status, your exit strategy..."></textarea>
-      </div>
-      <button class="form-submit" id="submit-btn" onclick="handleSubmit()">
-        <span data-lang="en">Submit Deal →</span>
-        <span data-lang="nl">Deal Indienen →</span>
-        <span data-lang="es">Enviar Operación →</span>
-      </button>
+      <div class="form-group"><label data-lang="en">Brief Deal Description</label><label data-lang="nl">Korte Omschrijving</label><label data-lang="es">Descripción Breve</label><textarea id="input-desc" placeholder="Asset type, current status, your exit strategy..."></textarea></div>
+      <button class="form-submit" id="submit-btn" onclick="handleSubmit()"><span data-lang="en">Submit Deal →</span><span data-lang="nl">Deal Indienen →</span><span data-lang="es">Enviar Operación →</span></button>
     </div>
   </div>
 </section>
@@ -499,52 +344,20 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 <!-- DIRECT EMAIL -->
 <div class="direct-email-section">
   <div class="direct-email-inner reveal">
-    <p class="section-label" style="justify-content:center;">
-      <span data-lang="en">Direct Contact</span>
-      <span data-lang="nl">Direct Contact</span>
-      <span data-lang="es">Contacto Directo</span>
-    </p>
-    <h2 style="margin-bottom:1rem;">
-      <span data-lang="en">Prefer to email <em>directly?</em></span>
-      <span data-lang="nl">Liever direct <em>mailen?</em></span>
-      <span data-lang="es">¿Prefiere escribirnos <em>directamente?</em></span>
-    </h2>
-    <p>
-      <span data-lang="en">Click below — your email app opens with a pre-filled template in English. Just add your details and send.</span>
-      <span data-lang="nl">Klik hieronder — uw e-mailprogramma opent met een kant-en-klaar template in het Nederlands. Vul uw gegevens in en verstuur.</span>
-      <span data-lang="es">Haga clic abajo — su app de correo se abre con una plantilla en español. Rellene sus datos y envíe.</span>
-    </p>
-    <button onclick="openDirectEmail()" class="btn-primary" style="margin-top:2rem;">
-      <span data-lang="en">✉ Email us at info@costacapital.pro</span>
-      <span data-lang="nl">✉ Mail ons op info@costacapital.pro</span>
-      <span data-lang="es">✉ Escríbenos a info@costacapital.pro</span>
-    </button>
+    <p class="section-label" style="justify-content:center;"><span data-lang="en">Direct Contact</span><span data-lang="nl">Direct Contact</span><span data-lang="es">Contacto Directo</span></p>
+    <h2 style="margin-bottom:1rem;"><span data-lang="en">Prefer to email <em>directly?</em></span><span data-lang="nl">Liever direct <em>mailen?</em></span><span data-lang="es">¿Prefiere escribirnos <em>directamente?</em></span></h2>
+    <p><span data-lang="en">Click below — your email app opens with a pre-filled template in English. Just add your details and send.</span><span data-lang="nl">Klik hieronder — uw e-mailprogramma opent met een kant-en-klaar template in het Nederlands. Vul uw gegevens in en verstuur.</span><span data-lang="es">Haga clic abajo — su app de correo se abre con una plantilla en español. Rellene sus datos y envíe.</span></p>
+    <button onclick="openDirectEmail()" class="btn-primary" style="margin-top:2rem;"><span data-lang="en">✉ Email us at info@costacapital.pro</span><span data-lang="nl">✉ Mail ons op info@costacapital.pro</span><span data-lang="es">✉ Escríbenos a info@costacapital.pro</span></button>
   </div>
 </div>
 
 <!-- AI TOOL -->
 <section class="tool-section">
   <div class="tool-inner reveal">
-    <div class="tool-badge">
-      <span data-lang="en">Powered by AI</span>
-      <span data-lang="nl">Aangedreven door AI</span>
-      <span data-lang="es">Impulsado por IA</span>
-    </div>
-    <h2>
-      <span data-lang="en">Know your financing<br><em>before you ask.</em></span>
-      <span data-lang="nl">Ken uw financiering<br><em>voordat u vraagt.</em></span>
-      <span data-lang="es">Conoce tu financiación<br><em>antes de preguntar.</em></span>
-    </h2>
-    <p>
-      <span data-lang="en">Use our AI tool to instantly model what financing is available for your real estate project — LTV, loan size, conditions and indicative pricing.</span>
-      <span data-lang="nl">Gebruik onze AI-tool om direct te berekenen welke financiering beschikbaar is voor uw vastgoedproject — LTV, leningbedrag, voorwaarden en indicatieve prijsstelling.</span>
-      <span data-lang="es">Usa nuestra herramienta de IA para modelar al instante la financiación disponible para tu proyecto inmobiliario — LTV, importe del préstamo, condiciones y precio indicativo.</span>
-    </p>
-    <a href="https://app.costacapital.pro" class="btn-primary">
-      <span data-lang="en">Open AI Finance Tool →</span>
-      <span data-lang="nl">Open AI Financieringstool →</span>
-      <span data-lang="es">Abrir Herramienta de Financiación IA →</span>
-    </a>
+    <div class="tool-badge"><span data-lang="en">Powered by AI</span><span data-lang="nl">Aangedreven door AI</span><span data-lang="es">Impulsado por IA</span></div>
+    <h2><span data-lang="en">Know your financing<br><em>before you ask.</em></span><span data-lang="nl">Ken uw financiering<br><em>voordat u vraagt.</em></span><span data-lang="es">Conoce tu financiación<br><em>antes de preguntar.</em></span></h2>
+    <p><span data-lang="en">Use our AI tool to instantly model what financing is available for your real estate project — LTV, loan size, conditions and indicative pricing.</span><span data-lang="nl">Gebruik onze AI-tool om direct te berekenen welke financiering beschikbaar is voor uw vastgoedproject — LTV, leningbedrag, voorwaarden en indicatieve prijsstelling.</span><span data-lang="es">Usa nuestra herramienta de IA para modelar al instante la financiación disponible para tu proyecto inmobiliario — LTV, importe del préstamo, condiciones y precio indicativo.</span></p>
+    <a href="https://app.costacapital.pro" class="btn-primary"><span data-lang="en">Open AI Finance Tool →</span><span data-lang="nl">Open AI Financieringstool →</span><span data-lang="es">Abrir Herramienta de Financiación IA →</span></a>
   </div>
 </section>
 
@@ -552,51 +365,439 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 <section class="about-section" id="about">
   <div class="about-inner">
     <div class="about-text reveal">
-      <p class="section-label">
-        <span data-lang="en">About Costa Capital</span>
-        <span data-lang="nl">Over Costa Capital</span>
-        <span data-lang="es">Sobre Costa Capital</span>
-      </p>
-      <h2>
-        <span data-lang="en">A capital partner<br>with <em>skin in the game.</em></span>
-        <span data-lang="nl">Een kapitaalpartner<br>met <em>eigen belang.</em></span>
-        <span data-lang="es">Un socio de capital<br>con <em>interés propio.</em></span>
-      </h2>
-      <p>
-        <span data-lang="en">Costa Capital is an independent real estate finance and capital solutions platform. We lend, co-invest, and source — with a primary focus on Spain and selective reach across Western Europe.</span>
-        <span data-lang="nl">Costa Capital is een onafhankelijk vastgoedfinancieringsplatform. Wij financieren, co-investeren en sourcen — met een primaire focus op Spanje en selectief bereik in West-Europa.</span>
-        <span data-lang="es">Costa Capital es una plataforma independiente de financiación inmobiliaria y soluciones de capital. Prestamos, co-invertimos y originamos operaciones — con foco principal en España y presencia selectiva en Europa Occidental.</span>
-      </p>
-      <p>
-        <span data-lang="en">We work directly with developers, investors and asset holders — no unnecessary intermediaries, no slow processes. Our decisions are made in-house, which means faster answers and real flexibility.</span>
-        <span data-lang="nl">Wij werken direct met ontwikkelaars, investeerders en vastgoedeigenaren — geen onnodige tussenpersonen, geen trage processen. Onze beslissingen worden intern genomen, wat betekent: snellere antwoorden en echte flexibiliteit.</span>
-        <span data-lang="es">Trabajamos directamente con promotores, inversores y propietarios de activos — sin intermediarios innecesarios, sin procesos lentos. Nuestras decisiones se toman internamente: respuestas más rápidas y flexibilidad real.</span>
-      </p>
+      <p class="section-label"><span data-lang="en">About Costa Capital</span><span data-lang="nl">Over Costa Capital</span><span data-lang="es">Sobre Costa Capital</span></p>
+      <h2><span data-lang="en">A capital partner<br>with <em>skin in the game.</em></span><span data-lang="nl">Een kapitaalpartner<br>met <em>eigen belang.</em></span><span data-lang="es">Un socio de capital<br>con <em>interés propio.</em></span></h2>
+      <p><span data-lang="en">Costa Capital is an independent real estate finance and capital solutions platform. We lend, co-invest, and source — with a primary focus on Spain and selective reach across Western Europe.</span><span data-lang="nl">Costa Capital is een onafhankelijk vastgoedfinancieringsplatform. Wij financieren, co-investeren en sourcen — met een primaire focus op Spanje en selectief bereik in West-Europa.</span><span data-lang="es">Costa Capital es una plataforma independiente de financiación inmobiliaria y soluciones de capital. Prestamos, co-invertimos y originamos operaciones — con foco principal en España y presencia selectiva en Europa Occidental.</span></p>
+      <p><span data-lang="en">We work directly with developers, investors and asset holders — no unnecessary intermediaries, no slow processes. Our decisions are made in-house, which means faster answers and real flexibility.</span><span data-lang="nl">Wij werken direct met ontwikkelaars, investeerders en vastgoedeigenaren — geen onnodige tussenpersonen, geen trage processen. Onze beslissingen worden intern genomen, wat betekent: snellere antwoorden en echte flexibiliteit.</span><span data-lang="es">Trabajamos directamente con promotores, inversores y propietarios de activos — sin intermediarios innecesarios, sin procesos lentos. Nuestras decisiones se toman internamente: respuestas más rápidas y flexibilidad real.</span></p>
     </div>
     <div class="about-pillars reveal">
-      <div class="pillar">
-        <div class="pillar-icon">⚡</div>
-        <h4><span data-lang="en">Speed</span><span data-lang="nl">Snelheid</span><span data-lang="es">Velocidad</span></h4>
-        <p><span data-lang="en">48-hour first response. Term sheets in days, not weeks.</span><span data-lang="nl">Eerste reactie binnen 48 uur. Term sheets in dagen, niet weken.</span><span data-lang="es">Primera respuesta en 48 horas. Term sheets en días, no semanas.</span></p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🎯</div>
-        <h4><span data-lang="en">Precision</span><span data-lang="nl">Precisie</span><span data-lang="es">Precisión</span></h4>
-        <p><span data-lang="en">Structured for the deal, not a generic product shelf.</span><span data-lang="nl">Gestructureerd voor de deal, niet een generiek productaanbod.</span><span data-lang="es">Estructurado para la operación, no para un catálogo genérico.</span></p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🤝</div>
-        <h4><span data-lang="en">Alignment</span><span data-lang="nl">Afstemming</span><span data-lang="es">Alineación</span></h4>
-        <p><span data-lang="en">We co-invest. Our success is tied to yours.</span><span data-lang="nl">Wij co-investeren. Ons succes is verbonden aan het uwe.</span><span data-lang="es">Co-invertimos. Nuestro éxito está ligado al tuyo.</span></p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🌍</div>
-        <h4><span data-lang="en">Network</span><span data-lang="nl">Netwerk</span><span data-lang="es">Red</span></h4>
-        <p><span data-lang="en">Deep-rooted in the Spanish market, with connections across Western Europe.</span><span data-lang="nl">Diepgeworteld in de Spaanse markt, met verbindingen door heel West-Europa.</span><span data-lang="es">Profundamente arraigados en el mercado español, con conexiones en Europa Occidental.</span></p>
-      </div>
+      <div class="pillar"><div class="pillar-icon">⚡</div><h4><span data-lang="en">Speed</span><span data-lang="nl">Snelheid</span><span data-lang="es">Velocidad</span></h4><p><span data-lang="en">48-hour first response. Term sheets in days, not weeks.</span><span data-lang="nl">Eerste reactie binnen 48 uur. Term sheets in dagen, niet weken.</span><span data-lang="es">Primera respuesta en 48 horas. Term sheets en días, no semanas.</span></p></div>
+      <div class="pillar"><div class="pillar-icon">🎯</div><h4><span data-lang="en">Precision</span><span data-lang="nl">Precisie</span><span data-lang="es">Precisión</span></h4><p><span data-lang="en">Structured for the deal, not a generic product shelf.</span><span data-lang="nl">Gestructureerd voor de deal, niet een generiek productaanbod.</span><span data-lang="es">Estructurado para la operación, no para un catálogo genérico.</span></p></div>
+      <div class="pillar"><div class="pillar-icon">🤝</div><h4><span data-lang="en">Alignment</span><span data-lang="nl">Afstemming</span><span data-lang="es">Alineación</span></h4><p><span data-lang="en">We co-invest. Our success is tied to yours.</span><span data-lang="nl">Wij co-investeren. Ons succes is verbonden aan het uwe.</span><span data-lang="es">Co-invertimos. Nuestro éxito está ligado al tuyo.</span></p></div>
+      <div class="pillar"><div class="pillar-icon">🌍</div><h4><span data-lang="en">Network</span><span data-lang="nl">Netwerk</span><span data-lang="es">Red</span></h4><p><span data-lang="en">Deep-rooted in the Spanish market, with connections across Western Europe.</span><span data-lang="nl">Diepgeworteld in de Spaanse markt, met verbindingen door heel West-Europa.</span><span data-lang="es">Profundamente arraigados en el mercado español, con conexiones en Europa Occidental.</span></p></div>
     </div>
   </div>
 </section>
+
+
+
+<!-- ═══ LEAD MAGNET SECTIE ═══════════════════════════════════════ -->
+<!-- Plak dit DIRECT BOVEN de <!-- FOOTER --> comment in index.html -->
+
+<style>
+/* Lead Magnet sectie — past bij bestaande Costa Capital stijl */
+.guide-section {
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  padding: 7rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.guide-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(200,169,110,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.guide-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* LEFT — inhoud */
+.guide-left {}
+.guide-pdf-preview {
+  background: var(--black);
+  border: 1px solid var(--gold-dim);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+.guide-pdf-preview::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+}
+.guide-pdf-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.guide-pdf-title {
+  font-family: var(--font-d);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.guide-pdf-meta {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  letter-spacing: 0.05em;
+}
+.guide-includes-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.guide-includes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.guide-includes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.guide-includes-list li:last-child { border-bottom: none; }
+.guide-includes-list li::before {
+  content: '—';
+  color: var(--gold);
+  font-family: var(--font-d);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* RIGHT — formulier */
+.guide-form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border-md);
+  padding: 3rem;
+}
+.guide-form-title {
+  font-family: var(--font-d);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.guide-form-title em { font-style: italic; color: var(--gold-light); }
+.guide-form-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+.guide-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.guide-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.guide-privacy {
+  font-size: 0.72rem;
+  color: var(--muted2);
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.03em;
+}
+
+/* Success state */
+.guide-success {
+  display: none;
+  text-align: center;
+  padding: 2rem 0;
+}
+.guide-success-icon {
+  font-family: var(--font-d);
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.guide-success-title {
+  font-family: var(--font-d);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+.guide-success-text {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media(max-width:1024px) {
+  .guide-section { padding: 5rem 2rem; }
+  .guide-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
+@media(max-width:640px) {
+  .guide-section { padding: 4rem 1.2rem; }
+  .guide-form-wrap { padding: 2rem 1.5rem; }
+  .guide-form-row { grid-template-columns: 1fr; }
+}
+</style>
+
+<section class="guide-section" id="guide">
+  <div class="guide-inner">
+
+    <!-- LINKS — inhoud gids -->
+    <div class="guide-left reveal">
+      <p class="section-label">
+        <span data-lang="en">Free Download</span>
+        <span data-lang="nl">Gratis Download</span>
+        <span data-lang="es">Descarga Gratuita</span>
+      </p>
+      <h2 style="margin-bottom:2rem;">
+        <span data-lang="en">The complete guide to<br><em>Spanish real estate finance.</em></span>
+        <span data-lang="nl">De complete gids voor<br><em>Spaanse vastgoedfinanciering.</em></span>
+        <span data-lang="es">La guía completa sobre<br><em>financiación inmobiliaria en España.</em></span>
+      </h2>
+
+      <!-- PDF preview -->
+      <div class="guide-pdf-preview">
+        <p class="guide-pdf-tag">Costa Capital</p>
+        <p class="guide-pdf-title">Real Estate Finance<br>Guide Spain</p>
+        <p class="guide-pdf-meta">
+          <span data-lang="en">2026 Edition · 20 pages · PDF</span>
+          <span data-lang="nl">Editie 2026 · 20 pagina's · PDF</span>
+          <span data-lang="es">Edición 2026 · 20 páginas · PDF</span>
+        </p>
+      </div>
+
+      <!-- Inhoud lijst -->
+      <p class="guide-includes-title">
+        <span data-lang="en">What's inside</span>
+        <span data-lang="nl">Wat staat erin</span>
+        <span data-lang="es">Qué encontrará</span>
+      </p>
+      <ul class="guide-includes-list">
+        <li>
+          <span data-lang="en">How Spanish real estate finance works — LTV, LTC, lender types</span>
+          <span data-lang="nl">Hoe Spaanse vastgoedfinanciering werkt — LTV, LTC, lendertypen</span>
+          <span data-lang="es">Cómo funciona la financiación inmobiliaria española — LTV, LTC</span>
+        </li>
+        <li>
+          <span data-lang="en">Bridge loans & developer finance explained</span>
+          <span data-lang="nl">Brugfinanciering & ontwikkelaarsfinanciering uitgelegd</span>
+          <span data-lang="es">Préstamos puente y financiación para promotores explicados</span>
+        </li>
+        <li>
+          <span data-lang="en">What lenders really want to see — the 7 critical documents</span>
+          <span data-lang="nl">Wat lenders écht willen zien — de 7 kritieke documenten</span>
+          <span data-lang="es">Lo que los prestamistas realmente quieren ver — los 7 documentos clave</span>
+        </li>
+        <li>
+          <span data-lang="en">LTV & pricing by region — Costa del Sol, Costa Blanca, Valencia, Ibiza</span>
+          <span data-lang="nl">LTV & prijzen per regio — Costa del Sol, Costa Blanca, Valencia, Ibiza</span>
+          <span data-lang="es">LTV y precios por región — Costa del Sol, Costa Blanca, Valencia, Ibiza</span>
+        </li>
+        <li>
+          <span data-lang="en">NIE, escritura & Spanish legal basics</span>
+          <span data-lang="nl">NIE, escritura & Spaanse juridische basis</span>
+          <span data-lang="es">NIE, escritura y conceptos jurídicos básicos</span>
+        </li>
+        <li>
+          <span data-lang="en">10 mistakes that kill deals</span>
+          <span data-lang="nl">10 fouten die deals laten mislukken</span>
+          <span data-lang="es">10 errores que arruinan operaciones</span>
+        </li>
+        <li>
+          <span data-lang="en">Your complete financing checklist</span>
+          <span data-lang="nl">Uw complete financieringschecklist</span>
+          <span data-lang="es">Su checklist completo de financiación</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RECHTS — formulier -->
+    <div class="guide-form-wrap reveal">
+
+      <!-- Formulier (zichtbaar) -->
+      <div id="guide-form-container">
+        <h3 class="guide-form-title">
+          <span data-lang="en">Download the guide<br><em>free of charge.</em></span>
+          <span data-lang="nl">Download de gids<br><em>gratis.</em></span>
+          <span data-lang="es">Descargue la guía<br><em>de forma gratuita.</em></span>
+        </h3>
+        <p class="guide-form-sub">
+          <span data-lang="en">Enter your details below — we'll send the PDF directly to your inbox.</span>
+          <span data-lang="nl">Vul uw gegevens in — wij sturen de PDF direct naar uw inbox.</span>
+          <span data-lang="es">Introduzca sus datos — le enviaremos el PDF directamente a su bandeja de entrada.</span>
+        </p>
+
+        <div class="guide-form-row">
+          <div class="guide-form-group">
+            <label>
+              <span data-lang="en">Full name *</span>
+              <span data-lang="nl">Volledige naam *</span>
+              <span data-lang="es">Nombre completo *</span>
+            </label>
+            <input type="text" id="guide-name"
+              style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div class="guide-form-group">
+            <label>Email *</label>
+            <input type="email" id="guide-email"
+              style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+        </div>
+
+        <div class="guide-form-row">
+          <div class="guide-form-group">
+            <label>
+              <span data-lang="en">Company</span>
+              <span data-lang="nl">Bedrijf</span>
+              <span data-lang="es">Empresa</span>
+            </label>
+            <input type="text" id="guide-company"
+              style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;"
+              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+          </div>
+          <div class="guide-form-group">
+            <label>
+              <span data-lang="en">Your role</span>
+              <span data-lang="nl">Uw rol</span>
+              <span data-lang="es">Su perfil</span>
+            </label>
+            <select id="guide-role"
+              style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;background-color:var(--card);">
+              <option value="" disabled selected id="guide-role-default">Select...</option>
+              <option value="developer" id="guide-role-1">Developer / Promotor</option>
+              <option value="investor" id="guide-role-2">Investor</option>
+              <option value="broker" id="guide-role-3">Broker / Agent</option>
+              <option value="family_office" id="guide-role-4">Family Office</option>
+              <option value="other" id="guide-role-5">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="guide-submit-btn" onclick="handleGuideSubmit()"
+          style="width:100%;background:var(--gold);color:var(--black);border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;transition:background 0.3s,transform 0.2s;"
+          onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-1px)'"
+          onmouseout="this.style.background='var(--gold)';this.style.transform=''">
+          <span data-lang="en">Send me the guide →</span>
+          <span data-lang="nl">Stuur mij de gids →</span>
+          <span data-lang="es">Envíame la guía →</span>
+        </button>
+
+        <p class="guide-privacy">
+          <span data-lang="en">🔒 No spam. Unsubscribe anytime.</span>
+          <span data-lang="nl">🔒 Geen spam. Op elk moment uitschrijven.</span>
+          <span data-lang="es">🔒 Sin spam. Cancela cuando quieras.</span>
+        </p>
+      </div>
+
+      <!-- Success state (verborgen, wordt zichtbaar na versturen) -->
+      <div id="guide-success" class="guide-success">
+        <div class="guide-success-icon">✓</div>
+        <h4 class="guide-success-title">
+          <span data-lang="en">Check your inbox!</span>
+          <span data-lang="nl">Check uw inbox!</span>
+          <span data-lang="es">Revise su bandeja de entrada</span>
+        </h4>
+        <p class="guide-success-text">
+          <span data-lang="en">Your guide is on its way. Have a project to finance? <a href="#deal" style="color:var(--gold);text-decoration:none;">Submit it here →</a></span>
+          <span data-lang="nl">Uw gids is onderweg. Heeft u een project te financieren? <a href="#deal" style="color:var(--gold);text-decoration:none;">Dien het hier in →</a></span>
+          <span data-lang="es">Su guía está en camino. ¿Tiene un proyecto que financiar? <a href="#deal" style="color:var(--gold);text-decoration:none;">Envíelo aquí →</a></span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+// ── LEAD MAGNET SUBMIT ────────────────────────────────────────
+async function handleGuideSubmit() {
+  const name    = document.getElementById('guide-name').value.trim();
+  const email   = document.getElementById('guide-email').value.trim();
+  const company = document.getElementById('guide-company').value.trim();
+  const role    = document.getElementById('guide-role').value;
+
+  if (!name || !email) {
+    const msg = { en:'Please enter your name and email.', nl:'Vul uw naam en e-mailadres in.', es:'Por favor introduzca su nombre y email.' };
+    alert(msg[currentLang] || msg.en);
+    return;
+  }
+
+  const btn = document.getElementById('guide-submit-btn');
+  const loadingMsg = { en:'Sending...', nl:'Versturen...', es:'Enviando...' };
+  btn.textContent = loadingMsg[currentLang] || loadingMsg.en;
+  btn.disabled = true;
+  btn.style.background = 'var(--muted2)';
+  btn.style.cursor = 'not-allowed';
+
+  try {
+    const res = await fetch('/.netlify/functions/send-guide', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, company, role, lang: currentLang })
+    });
+
+    if (!res.ok) throw new Error('Failed');
+
+    // Toon success state
+    document.getElementById('guide-form-container').style.display = 'none';
+    const success = document.getElementById('guide-success');
+    success.style.display = 'block';
+    setLang(currentLang);
+
+  } catch (err) {
+    const errMsg = { en:'Something went wrong. Please email us at info@costacapital.pro', nl:'Er ging iets mis. Mail ons op info@costacapital.pro', es:'Algo salió mal. Escríbenos a info@costacapital.pro' };
+    alert(errMsg[currentLang] || errMsg.en);
+    btn.innerHTML = '<span data-lang="en">Send me the guide →</span><span data-lang="nl">Stuur mij de gids →</span><span data-lang="es">Envíame la guía →</span>';
+    btn.disabled = false;
+    btn.style.background = 'var(--gold)';
+    btn.style.cursor = 'pointer';
+    setLang(currentLang);
+  }
+}
+
+// Rol opties vertalen bij taalwissel
+function updateGuideRoleOptions(lang) {
+  const opts = {
+    en: ['Select...','Developer / Promotor','Investor','Broker / Agent','Family Office','Other'],
+    nl: ['Selecteer...','Ontwikkelaar / Promotor','Investeerder','Makelaar / Agent','Family Office','Anders'],
+    es: ['Seleccione...','Promotor / Desarrollador','Inversor','Agente / Intermediario','Family Office','Otro']
+  };
+  const ids = ['guide-role-default','guide-role-1','guide-role-2','guide-role-3','guide-role-4','guide-role-5'];
+  const labels = opts[lang] || opts.en;
+  ids.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = labels[i];
+  });
+}
+
+// Haak in op bestaande setLang functie
+const _origSetLang = setLang;
+setLang = function(lang) {
+  _origSetLang(lang);
+  updateGuideRoleOptions(lang);
+};
+</script>
+
+
 
 <!-- FOOTER -->
 <footer>
@@ -623,12 +824,13 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
     <h5>Contact</h5>
     <ul>
       <li><a href="#deal"><span data-lang="en">Submit a Deal</span><span data-lang="nl">Deal Indienen</span><span data-lang="es">Enviar Operación</span></a></li>
+      <li><a href="#guide"><span data-lang="en">Finance Guide</span><span data-lang="nl">Financieringsgids</span><span data-lang="es">Guía de Financiación</span></a></li>
       <li><a href="mailto:info@costacapital.pro">info@costacapital.pro</a></li>
     </ul>
   </div>
 </footer>
 <div class="footer-bottom">
-  <p>© 2025 Costa Capital · costacapital.pro</p>
+  <p>© 2026 Costa Capital · costacapital.pro</p>
   <p>
     <span data-lang="en">All rights reserved · Confidential treatment guaranteed</span>
     <span data-lang="nl">Alle rechten voorbehouden · Vertrouwelijkheid gegarandeerd</span>
@@ -639,323 +841,88 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 <!-- DEAL MODAL -->
 <div id="deal-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);z-index:500;align-items:center;justify-content:center;padding:1.5rem;">
   <div style="background:var(--surface);border:1px solid var(--border-md);width:100%;max-width:560px;max-height:90vh;overflow-y:auto;box-shadow:0 32px 80px rgba(0,0,0,0.6);">
-    <!-- Modal header -->
     <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:2rem 2rem 1rem;border-bottom:1px solid var(--border);">
       <div>
-        <div style="font-family:var(--font-d);font-size:1.5rem;font-weight:300;margin-bottom:0.3rem;">
-          <span data-lang="en">Submit a Deal</span>
-          <span data-lang="nl">Deal Indienen</span>
-          <span data-lang="es">Enviar Operación</span>
-        </div>
-        <div style="font-size:0.8rem;color:var(--muted);">
-          <span data-lang="en">We respond within 48 hours · info@costacapital.pro</span>
-          <span data-lang="nl">Reactie binnen 48 uur · info@costacapital.pro</span>
-          <span data-lang="es">Respondemos en 48 horas · info@costacapital.pro</span>
-        </div>
+        <div style="font-family:var(--font-d);font-size:1.5rem;font-weight:300;margin-bottom:0.3rem;"><span data-lang="en">Submit a Deal</span><span data-lang="nl">Deal Indienen</span><span data-lang="es">Enviar Operación</span></div>
+        <div style="font-size:0.8rem;color:var(--muted);"><span data-lang="en">We respond within 48 hours · info@costacapital.pro</span><span data-lang="nl">Reactie binnen 48 uur · info@costacapital.pro</span><span data-lang="es">Respondemos en 48 horas · info@costacapital.pro</span></div>
       </div>
       <button onclick="closeModal()" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:1.4rem;line-height:1;padding:0.2rem 0.4rem;transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--muted)'">✕</button>
     </div>
-    <!-- Modal body -->
     <div style="padding:2rem;">
-      <!-- Name + Phone -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
-        <div style="display:flex;flex-direction:column;gap:0.4rem;">
-          <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">
-            <span data-lang="en">Name</span><span data-lang="nl">Naam</span><span data-lang="es">Nombre</span>
-          </label>
-          <input type="text" id="m-name" placeholder="Your name" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0.4rem;">
-          <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">
-            <span data-lang="en">Phone</span><span data-lang="nl">Telefoon</span><span data-lang="es">Teléfono</span>
-          </label>
-          <input type="tel" id="m-phone" placeholder="+34 ..." style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-        </div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);"><span data-lang="en">Name</span><span data-lang="nl">Naam</span><span data-lang="es">Nombre</span></label><input type="text" id="m-name" placeholder="Your name" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);"><span data-lang="en">Phone</span><span data-lang="nl">Telefoon</span><span data-lang="es">Teléfono</span></label><input type="tel" id="m-phone" placeholder="+34 ..." style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
       </div>
-      <!-- Email -->
-      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;">
-        <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Email</label>
-        <input type="email" id="m-email" placeholder="your@email.com" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-      </div>
-      <!-- Deal type + Location -->
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Email</label><input type="email" id="m-email" placeholder="your@email.com" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
-        <div style="display:flex;flex-direction:column;gap:0.4rem;">
-          <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">
-            <span data-lang="en">Deal Type</span><span data-lang="nl">Deal Type</span><span data-lang="es">Tipo de Operación</span>
-          </label>
-          <select id="m-type" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.9rem center;padding-right:2.2rem;">
-            <option value="" disabled selected>Select...</option>
-            <option value="dev">Developer Finance</option>
-            <option value="flip">Flip Finance</option>
-            <option value="distressed">Distressed Asset</option>
-            <option value="dealflow">Deal Flow / Co-Investment</option>
-          </select>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0.4rem;">
-          <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">
-            <span data-lang="en">Location</span><span data-lang="nl">Locatie</span><span data-lang="es">Ubicación</span>
-          </label>
-          <input type="text" id="m-location" placeholder="City / Region" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-        </div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);"><span data-lang="en">Deal Type</span><span data-lang="nl">Deal Type</span><span data-lang="es">Tipo de Operación</span></label><select id="m-type" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.9rem center;padding-right:2.2rem;"><option value="" disabled selected>Select...</option><option value="dev">Developer Finance</option><option value="flip">Flip Finance</option><option value="distressed">Distressed Asset</option><option value="dealflow">Deal Flow / Co-Investment</option></select></div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);"><span data-lang="en">Location</span><span data-lang="nl">Locatie</span><span data-lang="es">Ubicación</span></label><input type="text" id="m-location" placeholder="City / Region" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
       </div>
-      <!-- Capital -->
-      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;">
-        <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">
-          <span data-lang="en">Capital Required (€)</span><span data-lang="nl">Benodigde Financiering (€)</span><span data-lang="es">Capital Necesario (€)</span>
-        </label>
-        <select id="m-capital" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.9rem center;padding-right:2.2rem;">
-          <option value="" disabled selected>Select range...</option>
-          <option>€250K – €1M</option>
-          <option>€1M – €5M</option>
-          <option>€5M – €15M</option>
-          <option>€15M+</option>
-        </select>
-      </div>
-      <!-- Description -->
-      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.5rem;">
-        <label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">
-          <span data-lang="en">Brief Description</span><span data-lang="nl">Korte Omschrijving</span><span data-lang="es">Descripción Breve</span>
-        </label>
-        <textarea id="m-desc" rows="3" placeholder="Asset type, current status, exit strategy..." style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;resize:vertical;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-      </div>
-      <!-- Submit -->
-      <button id="modal-submit-btn" onclick="handleModalSubmit()" style="width:100%;background:var(--gold);color:var(--black);border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="if(!this.dataset.sent) this.style.background='var(--gold)'">
-        <span data-lang="en">Send via Email →</span>
-        <span data-lang="nl">Verstuur via E-mail →</span>
-        <span data-lang="es">Enviar por Email →</span>
-      </button>
-      <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:1rem;">
-        <span data-lang="en">Opens your email app · Sent to info@costacapital.pro</span>
-        <span data-lang="nl">Opent uw e-mailprogramma · Verstuurd naar info@costacapital.pro</span>
-        <span data-lang="es">Abre tu app de correo · Enviado a info@costacapital.pro</span>
-      </p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);"><span data-lang="en">Capital Required (€)</span><span data-lang="nl">Benodigde Financiering (€)</span><span data-lang="es">Capital Necesario (€)</span></label><select id="m-capital" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 0.9rem center;padding-right:2.2rem;"><option value="" disabled selected>Select range...</option><option>€250K – €1M</option><option>€1M – €5M</option><option>€5M – €15M</option><option>€15M+</option></select></div>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.5rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);"><span data-lang="en">Brief Description</span><span data-lang="nl">Korte Omschrijving</span><span data-lang="es">Descripción Breve</span></label><textarea id="m-desc" rows="3" placeholder="Asset type, current status, exit strategy..." style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;resize:vertical;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea></div>
+      <button id="modal-submit-btn" onclick="handleModalSubmit()" style="width:100%;background:var(--gold);color:var(--black);border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="if(!this.dataset.sent) this.style.background='var(--gold)'"><span data-lang="en">Send via Email →</span><span data-lang="nl">Verstuur via E-mail →</span><span data-lang="es">Enviar por Email →</span></button>
+      <p style="font-size:0.75rem;color:var(--muted);text-align:center;margin-top:1rem;"><span data-lang="en">Opens your email app · Sent to info@costacapital.pro</span><span data-lang="nl">Opent uw e-mailprogramma · Verstuurd naar info@costacapital.pro</span><span data-lang="es">Abre tu app de correo · Enviado a info@costacapital.pro</span></p>
     </div>
   </div>
 </div>
 
 <script>
-// ── MODAL ─────────────────────────────────────────────────────
 function openModal() {
   const modal = document.getElementById('deal-modal');
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
-  // sync modal select options to current language
   const t = TR[currentLang];
   const s = document.getElementById('m-type');
   if(s){ s.options[0].text=t.selDef; t.opts.forEach((txt,i)=>{ if(s.options[i+1]) s.options[i+1].text=txt; }); }
-  const n = document.getElementById('m-name');       if(n) n.placeholder = t.namePh;
-  const p = document.getElementById('m-phone');      if(p) p.placeholder = t.phonePh;
-  const l = document.getElementById('m-location');   if(l) l.placeholder = t.locationPh;
-  const d = document.getElementById('m-desc');       if(d) d.placeholder = t.descPh;
+  const n = document.getElementById('m-name');     if(n) n.placeholder = t.namePh;
+  const p = document.getElementById('m-phone');    if(p) p.placeholder = t.phonePh;
+  const l = document.getElementById('m-location'); if(l) l.placeholder = t.locationPh;
+  const d = document.getElementById('m-desc');     if(d) d.placeholder = t.descPh;
 }
-
 function closeModal() {
   document.getElementById('deal-modal').style.display = 'none';
   document.body.style.overflow = '';
 }
-
-// Close modal when clicking backdrop
-document.getElementById('deal-modal').addEventListener('click', function(e) {
-  if(e.target === this) closeModal();
-});
-
-// Close modal on Escape key
-document.addEventListener('keydown', function(e) {
-  if(e.key === 'Escape') closeModal();
-});
-
+document.getElementById('deal-modal').addEventListener('click', function(e) { if(e.target === this) closeModal(); });
+document.addEventListener('keydown', function(e) { if(e.key === 'Escape') closeModal(); });
 function handleModalSubmit() {
-  const name    = document.getElementById('m-name')?.value || '';
-  const email   = document.getElementById('m-email')?.value || '';
-  const phone   = document.getElementById('m-phone')?.value || '';
-  const type    = document.getElementById('m-type')?.value || '';
-  const location= document.getElementById('m-location')?.value || '';
-  const capital = document.getElementById('m-capital')?.value || '';
-  const desc    = document.getElementById('m-desc')?.value || '';
-
-  const subjects = { en:'Deal Submission — Costa Capital', nl:'Deal Aanmelding — Costa Capital', es:'Envío de Operación — Costa Capital' };
-  const bodies = {
-    en:`DEAL SUBMISSION — costacapital.pro\n\nName:     ${name}\nEmail:    ${email}\nPhone:    ${phone}\n\nDeal Type: ${type}\nLocation:  ${location}\nCapital:   ${capital}\n\nDescription:\n${desc}\n\n---\nSubmitted via costacapital.pro`,
-    nl:`DEAL AANMELDING — costacapital.pro\n\nNaam:     ${name}\nEmail:    ${email}\nTelefoon: ${phone}\n\nDeal Type: ${type}\nLocatie:   ${location}\nFinanciering: ${capital}\n\nOmschrijving:\n${desc}\n\n---\nIngediend via costacapital.pro`,
-    es:`ENVÍO DE OPERACIÓN — costacapital.pro\n\nNombre:   ${name}\nEmail:    ${email}\nTeléfono: ${phone}\n\nTipo: ${type}\nUbicación: ${location}\nCapital:   ${capital}\n\nDescripción:\n${desc}\n\n---\nEnviado desde costacapital.pro`
-  };
-
-  const subject = encodeURIComponent(subjects[currentLang] || subjects.en);
-  const body    = encodeURIComponent(bodies[currentLang] || bodies.en);
-  window.location.href = `mailto:info@costacapital.pro?subject=${subject}&body=${body}`;
-
-  const btn = document.getElementById('modal-submit-btn');
-  btn.dataset.sent = 'true';
-  btn.textContent = TR[currentLang].success;
-  btn.style.background = '#1e3a1e';
-  btn.style.color = '#6fcf97';
-  btn.style.letterSpacing = '0.05em';
-
-  setTimeout(() => {
-    closeModal();
-    btn.dataset.sent = '';
-    btn.style.background = '';
-    btn.style.color = '';
-    btn.style.letterSpacing = '';
-    btn.innerHTML = '<span data-lang="en">Send via Email →</span><span data-lang="nl">Verstuur via E-mail →</span><span data-lang="es">Enviar por Email →</span>';
-    setLang(currentLang);
-  }, 4000);
+  const name=document.getElementById('m-name')?.value||'';const email=document.getElementById('m-email')?.value||'';const phone=document.getElementById('m-phone')?.value||'';const type=document.getElementById('m-type')?.value||'';const location=document.getElementById('m-location')?.value||'';const capital=document.getElementById('m-capital')?.value||'';const desc=document.getElementById('m-desc')?.value||'';
+  const subjects={en:'Deal Submission — Costa Capital',nl:'Deal Aanmelding — Costa Capital',es:'Envío de Operación — Costa Capital'};
+  const bodies={en:`DEAL SUBMISSION\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nDeal Type: ${type}\nLocation: ${location}\nCapital: ${capital}\n\nDescription:\n${desc}`,nl:`DEAL AANMELDING\n\nNaam: ${name}\nEmail: ${email}\nTelefoon: ${phone}\nDeal Type: ${type}\nLocatie: ${location}\nFinanciering: ${capital}\n\nOmschrijving:\n${desc}`,es:`ENVÍO DE OPERACIÓN\n\nNombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nTipo: ${type}\nUbicación: ${location}\nCapital: ${capital}\n\nDescripción:\n${desc}`};
+  window.location.href=`mailto:info@costacapital.pro?subject=${encodeURIComponent(subjects[currentLang]||subjects.en)}&body=${encodeURIComponent(bodies[currentLang]||bodies.en)}`;
+  const btn=document.getElementById('modal-submit-btn');btn.dataset.sent='true';btn.textContent=TR[currentLang].success;btn.style.background='#1e3a1e';btn.style.color='#6fcf97';btn.style.letterSpacing='0.05em';
+  setTimeout(()=>{closeModal();btn.dataset.sent='';btn.style.background='';btn.style.color='';btn.style.letterSpacing='';btn.innerHTML='<span data-lang="en">Send via Email →</span><span data-lang="nl">Verstuur via E-mail →</span><span data-lang="es">Enviar por Email →</span>';setLang(currentLang);},4000);
 }
-const TR = {
-  en: {
-    namePh:'Your name', phonePh:'+34 ...', locationPh:'City / Region',
-    descPh:'Asset type, current status, your exit strategy...',
-    selDef:'Select...', capDef:'Select range...',
-    opts:['Developer Finance','Flip Finance','Distressed Asset','Deal Flow / Co-Investment'],
-    success:"✓ Submitted — we'll be in touch within 48 hours",
-    emailSubject:'Enquiry — Costa Capital',
-    emailBody:`Dear Costa Capital,
-
-I would like to discuss a real estate financing opportunity.
-
-MY DETAILS:
-Name:              
-Phone:             
-Email:             
-
-DEAL INFORMATION:
-Type:     [ ] Developer Finance  [ ] Flip Finance  [ ] Distressed Asset  [ ] Deal Flow
-Location: 
-Financing needed: €
-Timeline: 
-
-Brief description:
-
-
-Kind regards,`
-  },
-  nl: {
-    namePh:'Uw naam', phonePh:'+31 6 ...', locationPh:'Stad / Regio',
-    descPh:'Type asset, huidige status, uw exitstrategie...',
-    selDef:'Selecteer...', capDef:'Selecteer bedrag...',
-    opts:['Ontwikkelaarsfinanciering','Flip Financiering','Distressed Vastgoed','Dealflow / Co-Investering'],
-    success:'✓ Verzonden — wij nemen binnen 48 uur contact op',
-    emailSubject:'Aanvraag — Costa Capital',
-    emailBody:`Beste Costa Capital,
-
-Ik wil graag een vastgoedfinancieringsmogelijkheid bespreken.
-
-MIJN GEGEVENS:
-Naam:              
-Telefoon:          
-E-mail:            
-
-DEAL INFORMATIE:
-Soort:    [ ] Ontwikkelaarsfinanciering  [ ] Flip  [ ] Distressed Vastgoed  [ ] Deal Flow
-Locatie:  
-Gevraagde financiering: €
-Tijdlijn: 
-
-Korte omschrijving:
-
-
-Met vriendelijke groet,`
-  },
-  es: {
-    namePh:'Tu nombre', phonePh:'+34 ...', locationPh:'Ciudad / Región',
-    descPh:'Tipo de activo, estado actual, tu estrategia de salida...',
-    selDef:'Seleccionar...', capDef:'Seleccionar importe...',
-    opts:['Financiación para Promotores','Financiación para Flips','Activo en Dificultad','Flujo de Operaciones / Co-Inversión'],
-    success:'✓ Enviado — nos pondremos en contacto en 48 horas',
-    emailSubject:'Consulta — Costa Capital',
-    emailBody:`Estimado equipo de Costa Capital,
-
-Me gustaría hablar sobre una oportunidad de financiación inmobiliaria.
-
-MIS DATOS:
-Nombre:            
-Teléfono:          
-Email:             
-
-INFORMACIÓN DE LA OPERACIÓN:
-Tipo:     [ ] Financiación Promotor  [ ] Flip  [ ] Activo en Dificultad  [ ] Flujo de Operaciones
-Ubicación:
-Financiación solicitada: €
-Plazo:    
-
-Descripción breve:
-
-
-Atentamente,`
-  }
+const TR={
+  en:{namePh:'Your name',phonePh:'+34 ...',locationPh:'City / Region',descPh:'Asset type, current status, your exit strategy...',selDef:'Select...',capDef:'Select range...',opts:['Developer Finance','Flip Finance','Distressed Asset','Deal Flow / Co-Investment'],success:"✓ Submitted — we'll be in touch within 48 hours",emailSubject:'Enquiry — Costa Capital',emailBody:`Dear Costa Capital,\n\nI would like to discuss a real estate financing opportunity.\n\nMY DETAILS:\nName:\nPhone:\nEmail:\n\nDEAL INFORMATION:\nType:\nLocation:\nFinancing needed: €\nTimeline:\n\nBrief description:\n\n\nKind regards,`},
+  nl:{namePh:'Uw naam',phonePh:'+31 6 ...',locationPh:'Stad / Regio',descPh:'Type asset, huidige status, uw exitstrategie...',selDef:'Selecteer...',capDef:'Selecteer bedrag...',opts:['Ontwikkelaarsfinanciering','Flip Financiering','Distressed Vastgoed','Dealflow / Co-Investering'],success:'✓ Verzonden — wij nemen binnen 48 uur contact op',emailSubject:'Aanvraag — Costa Capital',emailBody:`Beste Costa Capital,\n\nIk wil graag een vastgoedfinancieringsmogelijkheid bespreken.\n\nMIJN GEGEVENS:\nNaam:\nTelefoon:\nE-mail:\n\nDEAL INFORMATIE:\nSoort:\nLocatie:\nGevraagde financiering: €\nTijdlijn:\n\nKorte omschrijving:\n\n\nMet vriendelijke groet,`},
+  es:{namePh:'Tu nombre',phonePh:'+34 ...',locationPh:'Ciudad / Región',descPh:'Tipo de activo, estado actual, tu estrategia de salida...',selDef:'Seleccionar...',capDef:'Seleccionar importe...',opts:['Financiación para Promotores','Financiación para Flips','Activo en Dificultad','Flujo de Operaciones / Co-Inversión'],success:'✓ Enviado — nos pondremos en contacto en 48 horas',emailSubject:'Consulta — Costa Capital',emailBody:`Estimado equipo de Costa Capital,\n\nMe gustaría hablar sobre una oportunidad de financiación inmobiliaria.\n\nMIS DATOS:\nNombre:\nTeléfono:\nEmail:\n\nINFORMACIÓN DE LA OPERACIÓN:\nTipo:\nUbicación:\nFinanciación solicitada: €\nPlazo:\n\nDescripción breve:\n\n\nAtentamente,`}
 };
-
-let currentLang = 'en';
-
-// ── LANGUAGE SWITCH ───────────────────────────────────────────
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
-  });
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
-  });
-  const t = TR[lang];
-  const n = document.getElementById('input-name');       if(n) n.placeholder = t.namePh;
-  const p = document.getElementById('input-phone');      if(p) p.placeholder = t.phonePh;
-  const l = document.getElementById('input-location');   if(l) l.placeholder = t.locationPh;
-  const d = document.getElementById('input-desc');       if(d) d.placeholder = t.descPh;
-  const s = document.getElementById('select-deal-type');
-  if(s){ s.options[0].text=t.selDef; t.opts.forEach((txt,i)=>{ if(s.options[i+1]) s.options[i+1].text=txt; }); }
-  const c = document.getElementById('select-capital');   if(c && c.options[0]) c.options[0].text = t.capDef;
+let currentLang='en';
+function setLang(lang){
+  currentLang=lang;
+  document.querySelectorAll('[data-lang]').forEach(el=>{el.classList.toggle('active',el.getAttribute('data-lang')===lang);});
+  document.querySelectorAll('.lang-btn').forEach(btn=>{btn.classList.toggle('active',btn.textContent.trim().toLowerCase()===lang);});
+  const t=TR[lang];
+  const n=document.getElementById('input-name');if(n)n.placeholder=t.namePh;
+  const p=document.getElementById('input-phone');if(p)p.placeholder=t.phonePh;
+  const l=document.getElementById('input-location');if(l)l.placeholder=t.locationPh;
+  const d=document.getElementById('input-desc');if(d)d.placeholder=t.descPh;
+  const s=document.getElementById('select-deal-type');if(s){s.options[0].text=t.selDef;t.opts.forEach((txt,i)=>{if(s.options[i+1])s.options[i+1].text=txt;});}
+  const c=document.getElementById('select-capital');if(c&&c.options[0])c.options[0].text=t.capDef;
+  updateGuideRoleOptions(lang);
 }
-
-// ── SCROLL REVEAL ─────────────────────────────────────────────
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if(entry.isIntersecting){
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      revealObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-// ── DEAL FORM SUBMIT ──────────────────────────────────────────
-function handleSubmit() {
-  const name    = document.getElementById('input-name')?.value || '';
-  const email   = document.querySelector('input[type="email"]')?.value || '';
-  const phone   = document.getElementById('input-phone')?.value || '';
-  const type    = document.getElementById('select-deal-type')?.value || '';
-  const location= document.getElementById('input-location')?.value || '';
-  const capital = document.getElementById('select-capital')?.value || '';
-  const desc    = document.getElementById('input-desc')?.value || '';
-
-  const subjects = { en:'Deal Submission — Costa Capital', nl:'Deal Aanmelding — Costa Capital', es:'Envío de Operación — Costa Capital' };
-  const bodies = {
-    en:`DEAL SUBMISSION — costacapital.pro\n\nName:     ${name}\nEmail:    ${email}\nPhone:    ${phone}\n\nDeal Type: ${type}\nLocation:  ${location}\nCapital:   ${capital}\n\nDescription:\n${desc}\n\n---\nSubmitted via costacapital.pro`,
-    nl:`DEAL AANMELDING — costacapital.pro\n\nNaam:     ${name}\nEmail:    ${email}\nTelefoon: ${phone}\n\nDeal Type: ${type}\nLocatie:   ${location}\nFinanciering: ${capital}\n\nOmschrijving:\n${desc}\n\n---\nIngediend via costacapital.pro`,
-    es:`ENVÍO DE OPERACIÓN — costacapital.pro\n\nNombre:   ${name}\nEmail:    ${email}\nTeléfono: ${phone}\n\nTipo: ${type}\nUbicación: ${location}\nCapital:   ${capital}\n\nDescripción:\n${desc}\n\n---\nEnviado desde costacapital.pro`
-  };
-
-  const subject = encodeURIComponent(subjects[currentLang] || subjects.en);
-  const body    = encodeURIComponent(bodies[currentLang] || bodies.en);
-  window.location.href = `mailto:info@costacapital.pro?subject=${subject}&body=${body}`;
-
-  const btn = document.getElementById('submit-btn');
-  const msg = TR[currentLang].success;
-  btn.textContent = msg;
-  btn.style.cssText = 'width:100%;background:#1e3a1e;color:#6fcf97;border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;cursor:pointer;letter-spacing:0.05em;';
-  setTimeout(() => {
-    btn.innerHTML = '<span data-lang="en">Submit Deal →</span><span data-lang="nl">Deal Indienen →</span><span data-lang="es">Enviar Operación →</span>';
-    btn.style.cssText = '';
-    setLang(currentLang);
-  }, 5000);
+const revealObs=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);revealObs.unobserve(entry.target);}});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+function handleSubmit(){
+  const name=document.getElementById('input-name')?.value||'';const email=document.querySelector('input[type="email"]')?.value||'';const phone=document.getElementById('input-phone')?.value||'';const type=document.getElementById('select-deal-type')?.value||'';const location=document.getElementById('input-location')?.value||'';const capital=document.getElementById('select-capital')?.value||'';const desc=document.getElementById('input-desc')?.value||'';
+  const subjects={en:'Deal Submission — Costa Capital',nl:'Deal Aanmelding — Costa Capital',es:'Envío de Operación — Costa Capital'};
+  const bodies={en:`DEAL SUBMISSION\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nDeal Type: ${type}\nLocation: ${location}\nCapital: ${capital}\n\nDescription:\n${desc}`,nl:`DEAL AANMELDING\n\nNaam: ${name}\nEmail: ${email}\nTelefoon: ${phone}\nDeal Type: ${type}\nLocatie: ${location}\nFinanciering: ${capital}\n\nOmschrijving:\n${desc}`,es:`ENVÍO DE OPERACIÓN\n\nNombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nTipo: ${type}\nUbicación: ${location}\nCapital: ${capital}\n\nDescripción:\n${desc}`};
+  window.location.href=`mailto:info@costacapital.pro?subject=${encodeURIComponent(subjects[currentLang]||subjects.en)}&body=${encodeURIComponent(bodies[currentLang]||bodies.en)}`;
+  const btn=document.getElementById('submit-btn');const msg=TR[currentLang].success;btn.textContent=msg;btn.style.cssText='width:100%;background:#1e3a1e;color:#6fcf97;border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;cursor:pointer;letter-spacing:0.05em;';
+  setTimeout(()=>{btn.innerHTML='<span data-lang="en">Submit Deal →</span><span data-lang="nl">Deal Indienen →</span><span data-lang="es">Enviar Operación →</span>';btn.style.cssText='';setLang(currentLang);},5000);
 }
-
-// ── DIRECT EMAIL TEMPLATE ────────────────────────────────────
-function openDirectEmail() {
-  const t = TR[currentLang] || TR.en;
-  window.location.href = `mailto:info@costacapital.pro?subject=${encodeURIComponent(t.emailSubject)}&body=${encodeURIComponent(t.emailBody)}`;
-}
-
-// ── INIT ──────────────────────────────────────────────────────
+function openDirectEmail(){const t=TR[currentLang]||TR.en;window.location.href=`mailto:info@costacapital.pro?subject=${encodeURIComponent(t.emailSubject)}&body=${encodeURIComponent(t.emailBody)}`;}
 setLang('en');
 </script>
 </body>
