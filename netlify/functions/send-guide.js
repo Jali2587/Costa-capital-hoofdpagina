@@ -2,6 +2,7 @@
 // Costa Capital — Lead magnet delivery + Brevo CRM
 // WHY-first email copy (Sinek) + value-first lead magnet (Hormozi)
 // Languages: NL / EN / ES / PL
+// Each language gets its own PDF from /public/ on costacapital.pro
 
 exports.handler = async (event) => {
 
@@ -38,9 +39,28 @@ exports.handler = async (event) => {
   }
 
   const BREVO_API_KEY = process.env.BREVO_API_KEY;
-  const PDF_URL = "https://costacapital.pro/Costa_Capital_Finance_Guide_Spain.pdf";
 
-  // Brevo list ID per language — add list 8 for PL in Brevo first
+  // ── PDF URL per language ────────────────────────────────────────────────────
+  // Upload each PDF to the /public folder of your Netlify site (costacapital.pro)
+  // with EXACTLY these filenames:
+  //
+  //   EN  →  Costa_Capital_Finance_Guide_EN.pdf   (your existing English original)
+  //   NL  →  Costa_Capital_Finance_Guide_NL.pdf
+  //   ES  →  Costa_Capital_Finance_Guide_ES.pdf
+  //   PL  →  Costa_Capital_Finance_Guide_PL.pdf
+  //
+  // They will be publicly accessible at https://costacapital.pro/<filename>
+
+  const PDF_URLS = {
+    en: "https://costacapital.pro/Costa_Capital_Finance_Guide_EN.pdf",
+    nl: "https://costacapital.pro/Costa_Capital_Finance_Guide_NL.pdf",
+    es: "https://costacapital.pro/Costa_Capital_Finance_Guide_ES.pdf",
+    pl: "https://costacapital.pro/Costa_Capital_Finance_Guide_PL.pdf",
+  };
+
+  const PDF_URL = PDF_URLS[lang] || PDF_URLS.en;
+
+  // Brevo list ID per language
   const LIST_IDS = { nl: 3, en: 4, es: 5, pl: 8 };
   const LIST_ID = LIST_IDS[lang] || LIST_IDS.en;
 
@@ -216,14 +236,12 @@ exports.handler = async (event) => {
         <tr>
           <td style="background:#141414;padding:40px 40px 32px;">
 
-            <!-- GREETING -->
             <p style="margin:0 0 20px;color:#f5f0e8;font-size:16px;line-height:1.5;">${c.greeting}</p>
 
-            <!-- WHY-FIRST HOOK (Sinek) -->
             <p style="margin:0 0 12px;color:#c8a96e;font-size:20px;font-weight:bold;line-height:1.4;font-style:italic;">"${c.hook}"</p>
             <p style="margin:0 0 28px;color:rgba(245,240,232,0.6);font-size:15px;line-height:1.7;">${c.hookSub}</p>
 
-            <!-- DOWNLOAD BUTTON (Hormozi: make the magnet irresistible) -->
+            <!-- DOWNLOAD BUTTON -->
             <table cellpadding="0" cellspacing="0" style="margin:0 0 12px;">
               <tr>
                 <td style="background:#c8a96e;border-radius:4px;">
@@ -234,7 +252,6 @@ exports.handler = async (event) => {
               </tr>
             </table>
 
-            <!-- VALUE NOTE (Hormozi: signal high value) -->
             <p style="margin:0 0 32px;color:rgba(245,240,232,0.4);font-size:12px;font-style:italic;">${c.valueNote}</p>
 
             <!-- WHAT'S INSIDE -->
@@ -249,7 +266,7 @@ exports.handler = async (event) => {
               </tr>`).join('')}
             </table>
 
-            <!-- DIVIDER SECTION (Hormozi: reveal the bigger problem the main offer solves) -->
+            <!-- DIVIDER SECTION -->
             <table width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 28px;background:#0f172a;border-left:3px solid #c8a96e;border-radius:0 4px 4px 0;">
               <tr>
                 <td style="padding:20px 24px;">
@@ -259,7 +276,7 @@ exports.handler = async (event) => {
               </tr>
             </table>
 
-            <!-- DUAL CTA (Hormozi: one for each audience segment) -->
+            <!-- DUAL CTA -->
             <table cellpadding="0" cellspacing="0" style="margin:0 0 32px;">
               <tr>
                 <td style="padding-right:12px;">
@@ -271,12 +288,11 @@ exports.handler = async (event) => {
               </tr>
             </table>
 
-            <!-- PERSONAL SIGN-OFF (Sinek: people follow people) -->
+            <!-- SIGN-OFF -->
             <p style="margin:0 0 4px;color:rgba(245,240,232,0.5);font-size:13px;">${c.signoff}</p>
             <p style="margin:0 0 2px;color:#f5f0e8;font-size:15px;font-weight:bold;">${c.signature}</p>
             <p style="margin:0 0 20px;color:rgba(245,240,232,0.4);font-size:12px;">${c.signatureRole}</p>
 
-            <!-- P.S. (Hormozi: P.S. is always read — use it for the most important CTA) -->
             <p style="margin:0;color:rgba(245,240,232,0.45);font-size:12px;font-style:italic;border-top:1px solid rgba(255,255,255,0.06);padding-top:16px;">${c.ps}</p>
 
           </td>
@@ -298,14 +314,6 @@ exports.handler = async (event) => {
 
 </body>
 </html>`;
-
-  // ── VISITOR EMAIL ─────────────────────────────────────────────────────────────
-  const visitorEmail = {
-    sender: { name: "Jaap Meelker · Costa Capital", email: "info@costacapital.pro" },
-    to: [{ email, name }],
-    subject: c.subject,
-    htmlContent: buildEmail(c),
-  };
 
   // ── LEAD NOTIFICATION TO JAAP ─────────────────────────────────────────────────
   const langLabel = { nl: "Nederlands", en: "Engels", es: "Spaans", pl: "Pools" }[lang] || lang;
@@ -340,6 +348,10 @@ exports.handler = async (event) => {
       <td style="padding:10px 16px;border-bottom:1px solid #e2e8f0;"><span style="background:#c8a96e;color:#080808;padding:2px 8px;border-radius:3px;font-size:12px;font-weight:bold;">${langLabel}</span></td>
     </tr>
     <tr>
+      <td style="padding:10px 16px;font-weight:bold;color:#334155;border-bottom:1px solid #e2e8f0;">PDF verstuurd</td>
+      <td style="padding:10px 16px;color:#64748b;border-bottom:1px solid #e2e8f0;font-size:12px;">${PDF_URL}</td>
+    </tr>
+    <tr style="background:#f8fafc;">
       <td style="padding:10px 16px;font-weight:bold;color:#334155;">Tijdstip</td>
       <td style="padding:10px 16px;color:#64748b;">${new Date().toLocaleString("nl-NL", { timeZone: "Europe/Madrid" })}</td>
     </tr>
@@ -361,10 +373,17 @@ exports.handler = async (event) => {
       COMPANY: company || "",
       JOB_TITLE: role || "",
       SOURCE: "guide_download",
-      LANGUAGE: lang.toUpperCase(), // "NL", "EN", "ES" or "PL"
+      LANGUAGE: lang.toUpperCase(),
     },
     listIds: [LIST_ID],
     updateEnabled: true,
+  };
+
+  const visitorEmail = {
+    sender: { name: "Jaap Meelker · Costa Capital", email: "info@costacapital.pro" },
+    to: [{ email, name }],
+    subject: c.subject,
+    htmlContent: buildEmail(c),
   };
 
   try {
