@@ -40,8 +40,8 @@ exports.handler = async (event) => {
   const BREVO_API_KEY = process.env.BREVO_API_KEY;
   const PDF_URL = "https://costacapital.pro/Costa_Capital_Finance_Guide_Spain.pdf";
 
-  // Brevo list ID per language — add list 6 for PL in Brevo first
-  const LIST_IDS = { nl: 3, en: 4, es: 5, pl: 6 };
+  // Brevo list ID per language — add list 8 for PL in Brevo first
+  const LIST_IDS = { nl: 3, en: 4, es: 5, pl: 8 };
   const LIST_ID = LIST_IDS[lang] || LIST_IDS.en;
 
   // ── EMAIL COPY — WHY-first (Sinek) + value-first (Hormozi) ─────────────────
