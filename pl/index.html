@@ -315,8 +315,8 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
       <p class="split-desc">Costa Capital działa jako Twój niezależny pośrednik na hiszpańskim wybrzeżu śródziemnomorskim. Identyfikujemy, oceniamy i strukturyzujemy okazje finansowania nieruchomości — i wprowadzamy Cię bezpośrednio do dewelopera lub właściciela projektu. Pożyczasz lub inwestujesz w transakcję, którą już przeanalizowaliśmy.</p>
       <ul class="split-points">
         <li>Wcześniej ocenione projekty: LTV, struktura prawna i wykonalność wyjścia</li>
-        <li>Typowe zwroty 8–14% rocznie, 1. lub 2. hipoteka</li>
-        <li>Tickety od €350K do €15M+</li>
+        <li>Fundusze długu, family offices i szanse wybranych banków</li>
+        <li>Tickety €350K – €50M</li>
         <li>Bezpośrednie wprowadzenie — bez anonimowego marketplace</li>
       </ul>
       <a href="mailto:info@costacapital.pro?subject=Rejestracja%20jako%20inwestor%20—%20Costa%20Capital&body=Szanowni%20Pa%C5%84stwo%2C%0A%0AJestem%20prywatnym%20po%C5%BCyczkodawc%C4%85%20%2F%20inwestorem%20zainteresowanym%20projektami%20nieruchomo%C5%9Bciowymi%20w%20Hiszpanii.%0A%0ANazwisko%3A%0AOrganizacja%3A%0ATypowy%20ticket%3A%20%E2%82%AC%0ADo%20celowy%20zwrot%3A%20%25%20rocznie%0APreferowane%20regiony%3A%0A%0AZ%20powa%C5%BCaniem%2C" class="btn-gold-outline">Zarejestruj się jako pożyczkodawca lub inwestor →</a>
@@ -556,7 +556,8 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
             <option>€350K – €1M</option>
             <option>€1M – €5M</option>
             <option>€5M – €15M</option>
-            <option>€15M+</option>
+            <option>€15M – €50M</option>
+            <option>€50M+</option>
           </select>
         </div>
       </div>
@@ -756,7 +757,8 @@ Z poważaniem,`)" class="btn-primary">✉ Napisz do nas na info@costacapital.pro
         <div style="display:flex;flex-direction:column;gap:0.4rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Typ Zgłoszenia</label><select id="m-type" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;"><option value="wybierz...">Wybierz...</option><option value="finansowanie_deweloperskie">Finansowanie Deweloperskie</option><option value="kredyt_pomostowy">Kredyt Pomostowy</option><option value="aktywa_trudne">Aktywa Trudne</option><option value="wprowadzanie_inwestorow">Wprowadzanie Inwestorów</option></select></div>
         <div style="display:flex;flex-direction:column;gap:0.4rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Lokalizacja</label><input type="text" id="m-location" placeholder="Miasto / Region" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;"></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Wymagane Finansowanie (€)</label><select id="m-capital" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;"><option>Wybierz kwotę...</option><option>€350K – €1M</option><option>€1M – €5M</option><option>€5M – €15M</option><option>€15M+</option></select></div>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Wymagane Finansowanie (€)</label><select id="m-capital" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;appearance:none;cursor:pointer;"><option>Wybierz kwotę...</option><option>€350K – €1M</option><option>€1M – €5M</option><option>€5M – €15M</option><option>€15M – €50M</option>
+            <option>€50M+</option></select></div>
       <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.5rem;"><label style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);">Krótki Opis</label><textarea id="m-desc" rows="3" placeholder="Typ aktywu, obecny stan, Twoja strategia wyjścia..." style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.7rem 0.9rem;outline:none;width:100%;resize:vertical;"></textarea></div>
       <button id="modal-submit-btn"
         onclick="handleModalSubmit('Zgłoszenie Projektu — Costa Capital', 'Zgłoszenie Projektu — Costa Capital', `ZGŁOSZENIE PROJEKTU
