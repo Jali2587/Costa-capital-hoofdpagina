@@ -86,8 +86,8 @@ exports.handler = async (event) => {
         "Uw complete financieringschecklist",
       ],
       valueNote: "Deze gids is zo compleet dat we er normaal voor zouden kunnen rekenen. U heeft hem gratis.",
-      dividerTitle: "Heeft u een project — of zoekt u rendement in Spanje?",
-      dividerText: "Costa Capital structureert financiering voor ontwikkelaars én introduceert de juiste private lender of investeerder bij elk project. Aan beide kanten van de tafel. Onafhankelijk.",
+      dividerTitle: "Heeft u een project dat financiering nodig heeft?",
+      dividerText: "Costa Capital structureert financiering voor professionele kredietnemers en introduceert geschikte aanvragen aan professionele geldverstrekkers. Onafhankelijk.",
       cta1Text: "Project indienen →",
       cta1Url: "https://costacapital.pro/#deal",
       cta2Text: "Financiering analyseren met AI →",
@@ -95,7 +95,7 @@ exports.handler = async (event) => {
       signoff: "Met vriendelijke groet,",
       signature: "Jaap Meelker",
       signatureRole: "Founder · Costa Capital / JLMX B.V. · Dénia, Costa Blanca",
-      ps: "P.S. Indicatieve financieringsvoorwaarden binnen 48 uur — stuur uw projectdetails naar info@costacapital.pro",
+      ps: "P.S. Eerste financieringsbeoordeling binnen 48 uur — stuur uw projectdetails naar info@costacapital.pro",
     },
 
     // ── ENGLISH ──────────────────────────────────────────────────────────────────
@@ -117,8 +117,8 @@ exports.handler = async (event) => {
         "Your complete financing checklist",
       ],
       valueNote: "This guide is so complete we could charge for it. You have it for free.",
-      dividerTitle: "Do you have a project — or are you looking for returns in Spain?",
-      dividerText: "Costa Capital structures financing for developers AND introduces the right private lender or investor to each project. Both sides of the table. Independent.",
+      dividerTitle: "Do you have a project that needs financing?",
+      dividerText: "Costa Capital structures financing for professional borrowers and introduces suitable requests to professional financing sources. Independent.",
       cta1Text: "Submit your project →",
       cta1Url: "https://costacapital.pro/#deal",
       cta2Text: "Analyse financing with AI →",
@@ -126,7 +126,7 @@ exports.handler = async (event) => {
       signoff: "Best regards,",
       signature: "Jaap Meelker",
       signatureRole: "Founder · Costa Capital / JLMX B.V. · Dénia, Costa Blanca",
-      ps: "P.S. Indicative financing terms within 48 hours — send your project details to info@costacapital.pro",
+      ps: "P.S. Initial financing assessment within 48 hours — send your project details to info@costacapital.pro",
     },
 
     // ── ESPAÑOL ───────────────────────────────────────────────────────────────────
@@ -148,8 +148,8 @@ exports.handler = async (event) => {
         "Su checklist completo de financiación",
       ],
       valueNote: "Esta guía es tan completa que podríamos cobrar por ella. Usted la tiene gratis.",
-      dividerTitle: "¿Tiene un proyecto — o busca rentabilidad en España?",
-      dividerText: "Costa Capital estructura financiación para promotores E introduce al prestamista privado o inversor adecuado en cada proyecto. A ambos lados de la mesa. Independientes.",
+      dividerTitle: "¿Tiene un proyecto que necesita financiación?",
+      dividerText: "Costa Capital estructura financiación para prestatarios profesionales e introduce las solicitudes adecuadas a fuentes de financiación profesionales. Independiente.",
       cta1Text: "Enviar su proyecto →",
       cta1Url: "https://costacapital.pro/es/#deal",
       cta2Text: "Analizar financiación con IA →",
@@ -157,7 +157,7 @@ exports.handler = async (event) => {
       signoff: "Atentamente,",
       signature: "Jaap Meelker",
       signatureRole: "Fundador · Costa Capital / JLMX B.V. · Dénia, Costa Blanca",
-      ps: "P.D. Condiciones indicativas en 48 horas — envíe los detalles de su proyecto a info@costacapital.pro",
+      ps: "P.D. Evaluación inicial de financiación en 48 horas — envíe los detalles de su proyecto a info@costacapital.pro",
     },
 
     // ── POLSKI ────────────────────────────────────────────────────────────────────
@@ -179,8 +179,8 @@ exports.handler = async (event) => {
         "Kompletna lista kontrolna finansowania",
       ],
       valueNote: "Ten przewodnik jest tak kompletny, że moglibyśmy za niego pobierać opłaty. Ty masz go za darmo.",
-      dividerTitle: "Masz projekt — lub szukasz zwrotów w Hiszpanii?",
-      dividerText: "Costa Capital strukturyzuje finansowanie dla deweloperów I wprowadza właściwego prywatnego pożyczkodawcę lub inwestora do każdego projektu. Po obu stronach stołu. Niezależnie.",
+      dividerTitle: "Masz projekt, który potrzebuje finansowania?",
+      dividerText: "Costa Capital strukturyzuje finansowanie dla profesjonalnych kredytobiorców i wprowadza odpowiednie wnioski do profesjonalnych źródeł finansowania. Niezależnie.",
       cta1Text: "Wyślij swój projekt →",
       cta1Url: "https://costacapital.pro/pl/#deal",
       cta2Text: "Analizuj finansowanie z AI →",
@@ -188,7 +188,7 @@ exports.handler = async (event) => {
       signoff: "Z poważaniem,",
       signature: "Jaap Meelker",
       signatureRole: "Założyciel · Costa Capital / JLMX B.V. · Dénia, Costa Blanca",
-      ps: "P.S. Indykatywne warunki finansowania w ciągu 48 godzin — wyślij szczegóły projektu na info@costacapital.pro",
+      ps: "P.S. Wstępna ocena finansowania w ciągu 48 godzin — wyślij szczegóły projektu na info@costacapital.pro",
     },
   };
 
