@@ -117,8 +117,8 @@ exports.handler = async (event) => {
         "Your complete financing checklist",
       ],
       valueNote: "This guide is so complete we could charge for it. You have it for free.",
-      dividerTitle: "Do you have a project — or are you looking for returns in Spain?",
-      dividerText: "Costa Capital structures financing for developers AND introduces the right private lender or investor to each project. Both sides of the table. Independent.",
+      dividerTitle: "Do you have a real estate project that needs financing in Spain?",
+      dividerText: "Costa Capital structures commercial real estate financing for developers and introduces professional financing sources to each project. Independent intermediary.",
       cta1Text: "Submit your project →",
       cta1Url: "https://costacapital.pro/#deal",
       cta2Text: "Analyse financing with AI →",
@@ -126,7 +126,7 @@ exports.handler = async (event) => {
       signoff: "Best regards,",
       signature: "Jaap Meelker",
       signatureRole: "Founder · Costa Capital / JLMX B.V. · Dénia, Costa Blanca",
-      ps: "P.S. Indicative financing terms within 48 hours — send your project details to info@costacapital.pro",
+      ps: "P.S. Initial financing assessment within 48 hours — send your project details to info@costacapital.pro",
     },
 
     // ── ESPAÑOL ───────────────────────────────────────────────────────────────────
