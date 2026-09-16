@@ -184,7 +184,7 @@ exports.handler = async (event) => {
       cta1Text: "Wyślij swój projekt →",
       cta1Url: "https://costacapital.pro/pl/#deal",
       cta2Text: "Analizuj finansowanie z AI →",
-      cta2Url: "https://app.costacapital.pro?lang=en",
+      cta2Url: "https://app.costacapital.pro?lang=pl",
       signoff: "Z poważaniem,",
       signature: "Jaap Meelker",
       signatureRole: "Założyciel · Costa Capital / JLMX B.V. · Dénia, Costa Blanca",
