@@ -394,27 +394,27 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
   <div class="guide-inner">
     <div class="reveal">
       <p class="section-label">Free Download</p>
-      <h2 style="margin-bottom:2rem;">The complete guide to<br><em>Spanish real estate finance.</em></h2>
+      <h2 style="margin-bottom:2rem;">Spain Real Estate Finance<br><em>Playbook 2026</em></h2>
       <div class="guide-pdf-preview">
         <p class="guide-pdf-tag">Costa Capital</p>
-        <p class="guide-pdf-title">Real Estate Finance<br>Guide Spain</p>
+        <p class="guide-pdf-title">Spain Real Estate<br>Finance Playbook</p>
         <p class="guide-pdf-meta">2026 Edition · 20 chapters · PDF</p>
       </div>
       <p class="guide-includes-title">What's inside</p>
       <ul class="guide-includes-list">
-        <li>How Spanish real estate finance works — LTV, LTC, lender types</li>
-        <li>Bridge loans & developer finance explained</li>
-        <li>What lenders really want to see — the 7 critical documents</li>
-        <li>LTV & pricing by region — Costa del Sol, Costa Blanca, Valencia, Ibiza</li>
-        <li>NIE, escritura & Spanish legal basics</li>
-        <li>10 mistakes that kill deals</li>
-        <li>Your complete financing checklist</li>
+        <li>How professional lenders assess a financing request</li>
+        <li>Bridge, acquisition, development & refinancing structures</li>
+        <li>LTV, LTC and Debt/GDV explained</li>
+        <li>The lender-ready documentation pack</li>
+        <li>Why financing requests stall or fail</li>
+        <li>How to improve your financing position</li>
+        <li>Financing Readiness Checklist</li>
       </ul>
     </div>
     <div class="guide-form-wrap reveal">
       <div id="guide-form-container">
-        <h3 class="guide-form-title">Download the guide<br><em>free of charge.</em></h3>
-        <p class="guide-form-sub">Enter your details below — we'll send the PDF directly to your inbox.</p>
+        <h3 class="guide-form-title">Download the Playbook<br><em>free of charge.</em></h3>
+        <p class="guide-form-sub">Enter your details and we'll send the Playbook directly to your inbox.</p>
         <div class="guide-form-row" style="margin-bottom:0;">
           <div class="guide-form-group">
             <label>Full name *</label>
@@ -431,6 +431,15 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
             <input type="text" id="guide-company" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
           </div>
           <div class="guide-form-group">
+            <label>Playbook language</label>
+            <select id="guide-lang" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.8rem 1rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;background-color:var(--card);">
+              <option value="en" selected>English</option>
+              <option value="nl">Nederlands</option>
+            </select>
+          </div>
+        </div>
+        <div class="guide-form-row" style="margin-bottom:0;">
+          <div class="guide-form-group">
             <label>Your role</label>
             <select id="guide-role" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.8rem 1rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;background-color:var(--card);">
               <option value="select...">Select...</option>
@@ -443,7 +452,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
           </div>
         </div>
         <button id="guide-submit-btn"
-          onclick="handleGuideSubmit('en', 'Check your inbox!', 'Please enter your name and email.')"
+          onclick="handleGuideSubmit(document.getElementById('guide-lang').value, 'Check your inbox!', 'Please enter your name and email.')"
           style="width:100%;background:var(--gold);color:var(--black);border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;transition:background 0.3s;"
           onmouseover="this.style.background='var(--gold-light)'"
           onmouseout="this.style.background='var(--gold)'">Send me the guide →</button>
@@ -451,8 +460,8 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
       </div>
       <div id="guide-success" class="guide-success">
         <div style="font-family:var(--font-d);font-size:3rem;color:var(--gold);margin-bottom:1rem;">&#10003;</div>
-        <h4 style="font-family:var(--font-d);font-size:1.6rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;">Check your inbox!</h4>
-        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">Your guide is on its way. Have a project to finance? <a href="#deal" style="color:var(--gold);text-decoration:none;">Submit it here →</a></p>
+        <h4 style="font-family:var(--font-d);font-size:1.6rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;">Your Playbook is on its way!</h4>
+        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">Have a live project? Run it through the Costa Capital <a href="https://app.costacapital.pro/" style="color:var(--gold);text-decoration:none;">Real Estate Financing Assessment →</a> to identify lender-readiness issues and potential improvements.</p>
       </div>
     </div>
   </div>
