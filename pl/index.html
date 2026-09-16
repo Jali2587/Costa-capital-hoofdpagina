@@ -327,67 +327,13 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:4rem;di
 <!-- 3. LEAD MAGNET -->
 <section class="guide-section" id="guide">
   <div class="guide-inner">
-    <div class="reveal">
-      <p class="section-label">Bezpłatne Pobieranie</p>
+    <div class="reveal" style="text-align:center;padding:3rem;">
+      <p class="section-label">Playbook 2026</p>
       <h2 style="margin-bottom:2rem;">Spain Real Estate Finance<br><em>Playbook 2026</em></h2>
-      <div class="guide-pdf-preview">
-        <p class="guide-pdf-tag">Costa Capital</p>
-        <p class="guide-pdf-title">Real Estate Finance<br>Guide Spain</p>
-        <p class="guide-pdf-meta">Wydanie 2026 · 20 rozdziałów · PDF</p>
-      </div>
-      <p class="guide-includes-title">Co znajdziesz w środku</p>
-      <ul class="guide-includes-list">
-        <li>Jak działa finansowanie nieruchomości w Hiszpanii — LTV, LTC, typy pożyczkodawców</li>
-        <li>Kredyty pomostowe i finansowanie deweloperskie wyjaśnione</li>
-        <li>Czego pożyczkodawcy naprawdę chcą — 7 kluczowych dokumentów</li>
-        <li>LTV i ceny według regionu — Costa del Sol, Costa Blanca, Walencja, Ibiza</li>
-        <li>NIE, escritura i podstawy prawne w Hiszpanii</li>
-        <li>10 błędów, które niszczą transakcje</li>
-        <li>Kompletna lista kontrolna finansowania</li>
-      </ul>
-    </div>
-    <div class="guide-form-wrap reveal">
-      <div id="guide-form-container">
-        <h3 class="guide-form-title">Pobierz przewodnik<br><em>bezpłatnie.</em></h3>
-        <p class="guide-form-sub">Wpisz swoje dane — wyślemy PDF bezpośrednio do Twojej skrzynki.</p>
-        <div class="guide-form-row" style="margin-bottom:0;">
-          <div class="guide-form-group">
-            <label>Imię i nazwisko *</label>
-            <input type="text" id="guide-name" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-          </div>
-          <div class="guide-form-group">
-            <label>E-mail *</label>
-            <input type="email" id="guide-email" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-          </div>
-        </div>
-        <div class="guide-form-row" style="margin-bottom:0;">
-          <div class="guide-form-group">
-            <label>Firma</label>
-            <input type="text" id="guide-company" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;font-weight:300;padding:0.8rem 1rem;outline:none;width:100%;transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-          </div>
-          <div class="guide-form-group">
-            <label>Twoja rola</label>
-            <select id="guide-role" style="background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--font-b);font-size:0.88rem;padding:0.8rem 1rem;outline:none;width:100%;appearance:none;cursor:pointer;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8a96e' stroke-width='1.5'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;background-color:var(--card);">
-              <option value="wybierz...">Wybierz...</option>
-              <option value="deweloper__promotor">Deweloper / Promotor</option>
-              <option value="inwestor__family_office">Profesjonalny Finansujący / Family Office</option>
-              <option value="agent__posrednik">Agent / Pośrednik</option>
-              <option value="prywatny_pozyczkodawca">Prywatny Pożyczkodawca</option>
-              <option value="inne">Inne</option>
-            </select>
-          </div>
-        </div>
-        <button id="guide-submit-btn"
-          onclick="handleGuideSubmit('pl', 'Sprawdź swoją skrzynkę!', 'Proszę wpisać imię i adres e-mail.')"
-          style="width:100%;background:var(--gold);color:var(--black);border:none;padding:1rem;font-family:var(--font-b);font-size:0.82rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;transition:background 0.3s;"
-          onmouseover="this.style.background='var(--gold-light)'"
-          onmouseout="this.style.background='var(--gold)'">Wyślij mi przewodnik →</button>
-        <p class="guide-privacy">🔒 Bez spamu. Wypisz się w każdej chwili.</p>
-      </div>
-      <div id="guide-success" class="guide-success">
-        <div style="font-family:var(--font-d);font-size:3rem;color:var(--gold);margin-bottom:1rem;">&#10003;</div>
-        <h4 style="font-family:var(--font-d);font-size:1.6rem;font-weight:300;color:var(--white);margin-bottom:0.8rem;">Sprawdź swoją skrzynkę!</h4>
-        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">Twój przewodnik jest w drodze. Masz projekt do sfinansowania? <a href="#deal" style="color:var(--gold);text-decoration:none;">Wyślij go tutaj →</a></p>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.7;margin-bottom:2rem;">Zaktualizowany Playbook 2026 jest obecnie dostępny w języku angielskim i holenderskim.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://costacapital.pro/" style="background:var(--gold);color:var(--black);padding:0.8rem 1.5rem;border:none;font-family:var(--font-b);font-size:0.82rem;font-weight:500;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;">English Version →</a>
+        <a href="https://costacapital.pro/nl/" style="background:var(--gold);color:var(--black);padding:0.8rem 1.5rem;border:none;font-family:var(--font-b);font-size:0.82rem;font-weight:500;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;">Nederlandse Versie →</a>
       </div>
     </div>
   </div>
